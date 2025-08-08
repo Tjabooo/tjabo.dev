@@ -55,8 +55,7 @@ const Education = () => {
   };
 
   return (
-    <div id="education" className="w-full mt-40 min-h-screen p-2 bg-transparent">
-      <div
+      <div id="education" className="w-full p-2 bg-transparent">      <div
         ref={timelineRef}
         className="max-w-[700px] mx-auto flex flex-col justify-center h-full relative"
       >

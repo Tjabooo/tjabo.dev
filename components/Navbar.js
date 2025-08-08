@@ -146,22 +146,27 @@ const Navbar = () => {
 									{t('nav.home')}
 								</li>
 							</Link>
-							<Link href="/#about">
+							<Link href="#about">
 								<li onClick={() => setNav(false)} className="py-3 text-sm">
 									{t('nav.about')}
 								</li>
 							</Link>
-							<Link href="/#skills">
+							<Link href="#education">
+								<li onClick={() => setNav(false)} className="py-3 text-sm">
+									{t('nav.education')}
+								</li>
+							</Link>
+							<Link href="#skills">
 								<li onClick={() => setNav(false)} className="py-3 text-sm">
 									{t('nav.skills')}
 								</li>
 							</Link>
-							<Link href="/#projects">
+							<Link href="#projects">
 								<li onClick={() => setNav(false)} className="py-3 text-sm">
 								  {t('nav.projects')}
 								</li>
 							</Link>
-							<Link href="/#contact">
+							<Link href="#contact">
 								<li onClick={() => setNav(false)} className="py-3 text-sm">
 									{t('nav.contact')}
 								</li>
