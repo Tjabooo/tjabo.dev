@@ -37,11 +37,11 @@ const Skills = () => {
         };
     }, []);
 	return (
-		<div id="skills" className="w-full lg:h-screen p-2">
-			<div
-				ref={skillsRef}
-				className="max-w-[1240px] mx-auto flex flex-col justify-center h-full"
-			>
+	<div id="skills" className="w-full p-2 mb-12 lg:mb-32">
+		<div
+			ref={skillsRef}
+			className="max-w-[1240px] mx-auto flex flex-col justify-center"
+		>
 				<div className={`transition-all duration-1000 ${isVisible ? 'lg:opacity-100 lg:translate-y-0' : 'lg:opacity-0 lg:translate-y-20'}`}>
 				<div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
 					<h2 className="py-4 text-xl tracking-widest uppercase text-[#8839ef]">

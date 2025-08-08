@@ -55,10 +55,11 @@ const Education = () => {
   };
 
   return (
-      <div id="education" className="w-full h-screen p-2 bg-transparent">      <div
-        ref={timelineRef}
-        className="max-w-[700px] mx-auto flex flex-col justify-center h-full relative"
-      >
+      <div id="education" className="w-full p-2 bg-transparent mb-12 lg:mb-32">
+        <div
+          ref={timelineRef}
+          className="max-w-[700px] mx-auto flex flex-col justify-center relative"
+        >
         <h2 className="py-4 text-xl tracking-widest uppercase text-[#8839ef] text-center">
           {t("education.header")}
         </h2>
