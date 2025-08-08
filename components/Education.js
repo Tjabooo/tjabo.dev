@@ -121,8 +121,13 @@ const Education = () => {
                         <span className="text-xs text-[#b4b4b4] mb-2">
                           {t(`education.${key}.location`)}
                         </span>
+                        <div className="block md:hidden mt-4 w-full">
+                          <p className="text-center text-[#b4b4b4] text-sm">
+                            {t(`education.${key}.programme`)}
+                          </p>
+                        </div>
                         <div
-                          className={`transition-all duration-300 overflow-hidden w-full ${
+                            className={`hidden md:block transition-all duration-300 overflow-hidden w-full ${
                             expanded === idx
                               ? "max-h-[200px] opacity-100 mt-4"
                               : "max-h-0 opacity-0 mt-0"

@@ -106,7 +106,7 @@ const Navbar = () => {
 						</a>
 					</div>
 
-					<div onClick={handleNav} className="md:hidden cursor-pointer">
+					<div onClick={handleNav} className="md:hidden cursor-pointer mr-3">
 						<AiOutlineMenu size={25} />
 					</div>
 				</div>
@@ -128,7 +128,7 @@ const Navbar = () => {
 				>
 					<div>
 						<div className="flex w-full items-center justify-between">
-							<LanguageSwitcher />
+						  <LanguageSwitcher />
 							<div
 								onClick={handleNav}
 								className="rounded-full shadow-lg shadow-gray-900 p-3 cursor-pointer"
