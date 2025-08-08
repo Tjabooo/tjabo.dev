@@ -186,9 +186,6 @@ const Navbar = () => {
 						</div>
 
 						<div className="pt-40">
-							<p className="uppercase tracking-widest text-[#8839ef]">
-								Let&apos;s connect
-							</p>
 							<div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
 								<a
 									href="https://github.com/Aperre/"
