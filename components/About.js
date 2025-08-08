@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import AboutImg from "../public/assets/me.jpg";
+import SignatureImg from "../public/assets/signature.png";
 import { useTranslation } from 'next-i18next';
 
 const About = () => {
@@ -26,11 +27,7 @@ const About = () => {
 					<p className="py-2 text-gray-300 text-xl text-justify">
 					{t('about.p4')}
 					</p>
-					{/* <Link href="/#projects">
-						<p className="py-2 text-gray-300 underline cursor-pointer">
-							Check out some of my latest projects
-						</p>
-					</Link> */}
+					<Image src={SignatureImg} className="rounded-xl w-auto h-auto" alt="signature" />
 				</div>
 				<div className="w-full h-auto m-auto shadow-xl shadow-gray-900 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
 					<Image src={AboutImg} className="rounded-xl" alt="/" />

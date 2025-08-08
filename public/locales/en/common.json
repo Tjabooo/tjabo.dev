@@ -17,9 +17,9 @@
   "about": {
     "header": "About me",
     "p1": "Being born and raised in Stockholm during the golden-age of smartphones, I have always been at the center of technology - a factor that has only piqued my passion more.",
-    "p2": "More coming...",
-    "p3": "",
-    "p4": ""
+    "p2": "I began programming at the age of 12, with some basic Python and HTML/CSS. My learning curve wasn't very linear, but since the age of 17 I have been slowly but surely been expanding my knowledgebase trying to integrate myself in more areas.",
+    "p3": "I will always be grateful for my peers who have helped me grow as a developer. Learning the importance of clean code and writing maintainable code has been a core focus of my journey. I see the joy in always being able to improve, I believe no one has perfected their craft, and I constantly strive for finding areas I can improve in.",
+    "p4": "In the future I would like to apply my work where it can help others. My focus has always been QoL since an organized mind is a happy mind. I want to make a positive impact on the world and contribute to a better future for everyone."
   },
   "skills": {
     "header": "Skills",
