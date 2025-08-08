@@ -17,7 +17,7 @@
   "about": {
     "header": "About me",
     "p1": "Being born and raised in Stockholm during the golden-age of smartphones, I have always been at the center of technology - a factor that has only piqued my passion more.",
-    "p2": "",
+    "p2": "More coming...",
     "p3": "",
     "p4": ""
   },
@@ -49,5 +49,9 @@
     "subject": "subject",
     "message": "message",
     "submit": "Send Message"
+  },
+  "projects": {
+    "header": "Projects",
+    "notice": "(Opening soon...)"
   }
 }

@@ -2,7 +2,7 @@ import Head from "next/head";
 import Main from "../components/Main";
 import About from "../components/About";
 import Skills from "../components/Skills";
-// import Projects from "../components/Projects.js";
+import Projects from "../components/Projects.js";
 import Contact from "../components/Contact";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -27,7 +27,7 @@ export default function Home() {
 			<Main />
 			<About />
 			<Skills />
-			{/* <Projects /> */}
+			<Projects />
 			<Contact />
 			<SpeedInsights />
 		</div>

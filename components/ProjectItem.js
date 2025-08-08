@@ -2,24 +2,25 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProjectItem = ({ title, backgroundImg, tech, projectUrl }) => {
+const ProjectItem = ({ title, backgroundImg, langs = [], projectUrl }) => {
 	return (
-		<div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-900 rounded-xl p-4 group hover:bg-gradient-to-r from-[#1E90FF] to-[#4e90ff]">
+		<div className="relative flex items-center justify-center h-20 w-full shadow-xl shadow-gray-900 rounded-xl p-4 group hover:scale-105 hover:outline hover:outline-1 hover:outline-[#8839ef] cursor-pointer">
 			<Image
 				className="rounded-xl group-hover:opacity-10"
 				src={backgroundImg}
-				alt="/"
+				alt=""
 			/>
-			<div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
-				<h3 className="text-2xl text-white tracking-wider text-center">
+			<div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col items-center">
+				<h3 className="text-2xl text-[#8839ef] tracking-wider text-center">
 					{title}
 				</h3>
-				<p className="text-white text-center pb-4 py-2">{tech}</p>
-				<Link href={projectUrl}>
-					<p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
-						More Info
-					</p>
-				</Link>
+				<div className="flex flex-row items-center justify-center gap-2 mt-2">
+					{langs.map((Icon, idx) => (
+						<span key={idx} className="text-white text-2xl flex items-center">
+							{Icon}
+						</span>
+					))}
+				</div>
 			</div>
 		</div>
 	);

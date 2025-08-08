@@ -17,7 +17,7 @@
   "about": {
     "header": "Om mig",
     "p1": "Jag är född och uppvuxen i Stockholm under smarttelefonernas guldålder, och har därför alltid varit i teknikens centrum - något som bara har ökat min passion mer och mer.",
-    "p2": "",
+    "p2": "Mer kommer...",
     "p3": "",
     "p4": ""
   },
@@ -49,5 +49,9 @@
     "subject": "ämne",
     "message": "meddelande",
     "submit": "Skicka Meddelande"
+  },
+  "projects": {
+    "header": "Projekt",
+    "notice": "(Öppnar snart...)"
   }
 }

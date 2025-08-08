@@ -89,11 +89,11 @@ const Navbar = () => {
 								{t('nav.skills')}
 							</li>
 						</Link>
-						{/* <Link href="/#projects">
+						<Link href="/#projects">
 							<li className="ml-10 text-sm uppercase hover:text-[#8839ef]">
 								{t('nav.projects')}
 							</li>
-						</Link> */}
+						</Link>
 						<Link href="#contact">
 							<li className="ml-10 text-sm uppercase hover:text-[#8839ef]">
 								{t('nav.contact')}
@@ -134,17 +134,6 @@ const Navbar = () => {
 				>
 					<div>
 						<div className="flex w-full items-center justify-between">
-							{/* <Link legacyBehavior href="/">
-								<a>
-									<Image
-										className="cursor-pointer"
-										src={NavLogo}
-										alt="/"
-										width="60"
-										height="50"
-									/>
-								</a>
-							</Link>*/}
 							<LanguageSwitcher />
 							<div
 								onClick={handleNav}
@@ -154,9 +143,6 @@ const Navbar = () => {
 							</div>
 						</div>
 						<div className="border-b border-[#8839ef50] my-4">
-							{/* <p className="w-[85%] md:w-[90%] py-3 text-[#8839ef]">
-								Let&apos;s build something Legendary Together
-							</p>*/}
 						</div>
 					</div>
 					<div className="py-2 flex flex-col">
