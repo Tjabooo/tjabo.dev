@@ -52,6 +52,7 @@
   },
   "projects": {
     "header": "Projekt",
-    "notice": "(Öppnar snart...)"
+    "notice": "(Öppnar snart...)",
+    "here": "(du är här)"
   }
 }

@@ -52,6 +52,7 @@
   },
   "projects": {
     "header": "Projects",
-    "notice": "(Opening soon...)"
+    "notice": "(Opening soon...)",
+    "here": "(you're here)"
   }
 }

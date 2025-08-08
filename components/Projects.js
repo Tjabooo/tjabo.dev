@@ -1,7 +1,9 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
-import { FaPhp, FaRust, FaHtml5, FaJs, FaCss3, FaPython } from "react-icons/fa";
+import { FaPhp, FaRust, FaHtml5, FaJs, FaCss3, FaPython, FaReact, FaNodeJs } from "react-icons/fa";
 import { useTranslation } from "next-i18next";
+import { BiLogoTailwindCss } from "react-icons/bi";
+import { TbBrandNextjs } from "react-icons/tb";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -27,9 +29,9 @@ const Projects = () => {
 						langs={[<FaPython key="python" />]}
 					/>
 					<ProjectItem
-						title="facial-recog"
+						title={`tjabo.dev ${t('projects.here')}`}
 						projectUrl=""
-						langs={[<FaPython key="python" />]}
+						langs={[<FaReact key="react" />, <TbBrandNextjs key="nextjs" />, <FaNodeJs key="nodejs" />, <BiLogoTailwindCss key="tailwindcss" />]}
 					/>
 					<ProjectItem
 						title="bevy-fps-shooter"
