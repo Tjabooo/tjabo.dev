@@ -1,9 +1,5 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
-// import foodImg from "../public/assets/projects/food-app.jpg";
-// import cryptoImg from "../public/assets/projects/crypto.jpg";
-// import movieImg from "../public/assets/projects/moviepedia.png";
-// import twitchImg from "../public/assets/projects/twitch.jpg";
 import { FaPhp, FaRust, FaHtml5, FaJs, FaCss3, FaPython } from "react-icons/fa";
 import { useTranslation } from "next-i18next";
 
@@ -22,27 +18,22 @@ const Projects = () => {
 				<div className="grid md:grid-cols-2 gap-8">
 				  <ProjectItem
 						title="fitcheck-uf-app"
-						// backgroundImg={foodImg}
-						projectUrl="/food"
-						// php, blade, html, js, css
+						projectUrl=""
 						langs={[<FaPhp key="php" />, <FaHtml5 key="html" />, <FaJs key="js" />, <FaCss3 key="css" />]}
 					/>
 					<ProjectItem
 						title="Tailcord"
-						// backgroundImg={twitchImg}
-						projectUrl="/twitch"
+						projectUrl=""
 						langs={[<FaPython key="python" />]}
 					/>
 					<ProjectItem
 						title="facial-recog"
-						// backgroundImg={movieImg}
-						projectUrl="/moviepedia"
+						projectUrl=""
 						langs={[<FaPython key="python" />]}
 					/>
 					<ProjectItem
 						title="bevy-fps-shooter"
-						// backgroundImg={cryptoImg}
-						projectUrl="/crypto"
+						projectUrl=""
 						langs={[<FaRust key="rust" />]}
 					/>
 				</div>
