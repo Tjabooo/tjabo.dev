@@ -1,0 +1,53 @@
+{
+  "header": "Tjabo | Fullstack Developer",
+  "nav": {
+    "home": "home",
+    "about": "about me",
+    "skills": "skills",
+    "projects": "projects",
+    "contact": "contact",
+    "resume": "Resume"
+  },
+  "home": {
+    "greeting": "Hello, I'm ",
+    "name": "Tjabo",
+    "title": "A Fullstack Developer",
+    "goal": "My goal in life is to achieve as much as possible while maintaining a healthy and loving lifestyle"
+  },
+  "about": {
+    "header": "About me",
+    "p1": "Being born and raised in Stockholm during the golden-age of smartphones, I have always been at the center of technology - a factor that has only piqued my passion more.",
+    "p2": "",
+    "p3": "",
+    "p4": ""
+  },
+  "skills": {
+    "header": "Skills",
+    "level": {
+      "python": "Advanced",
+      "rust": "Beginner",
+      "cs": "Beginner",
+      "php": "Intermediate",
+      "nodejs": "Intermediate",
+      "javascript": "Advanced",
+      "html": "Advanced",
+      "css": "Advanced",
+      "linux": "Arch/Debian Advanced",
+      "github": "Intermediate"
+    }
+  },
+  "contact": {
+    "header": "Contact",
+    "name": "Tjabo",
+    "title": "Fullstack Developer",
+    "encouragement": "Feel free to reach out if you're looking for a developer, have a question, or just want to connect.",
+    "connect": "Connect With Me"
+  },
+  "contact-form": {
+    "name": "name",
+    "email": "email",
+    "subject": "subject",
+    "message": "message",
+    "submit": "Send Message"
+  }
+}

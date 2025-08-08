@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+	font-family: "Outfit", sans-serif;
+}
+
+*{
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+@layer base {
+	body{
+		@apply bg-[#1e1e2e] text-[#ecf0f5] tracking-wide;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold;
+	}
+
+	h1 {
+		@apply text-4xl sm:text-5xl md:text-6xl font-[Outfit];
+	}
+
+	h2 {
+		@apply text-3xl sm:text-4xl;
+	}
+
+	li {
+		@apply cursor-pointer;
+	}
+
+	button {
+		@apply shadow-xl rounded-xl uppercase bg-[#8839ef] text-neutral-300 hover:bg-purple-500 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-700 active:shadow-lg transition duration-150 ease-in-out;
+	}
+}

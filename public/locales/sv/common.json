@@ -1,0 +1,53 @@
+{
+  "header": "Tjabo | Fullstack Utvecklare",
+  "nav": {
+    "home": "hem",
+    "about": "om mig",
+    "skills": "kunskaper",
+    "projects": "projekt",
+    "contact": "kontakta mig",
+    "resume": "CV"
+  },
+  "home": {
+    "greeting": "Hej, Jag Är ",
+    "name": "Tjabo",
+    "title": "En Fullstack Utvecklare",
+    "goal": "Mitt mål i livet är att uppnå så mycket som möjligt samtidigt som jag upprätthåller en hälsosam och kärleksfull livsstil"
+  },
+  "about": {
+    "header": "Om mig",
+    "p1": "Jag är född och uppvuxen i Stockholm under smarttelefonernas guldålder, och har därför alltid varit i teknikens centrum - något som bara har ökat min passion mer och mer.",
+    "p2": "",
+    "p3": "",
+    "p4": ""
+  },
+  "skills": {
+    "header": "Kunskaper",
+    "level": {
+      "python": "Avancerad",
+      "rust": "Nybörjare",
+      "cs": "Nybörjare",
+      "php": "Nybörjare",
+      "nodejs": "Kompetent",
+      "javascript": "Avancerad",
+      "html": "Avancerad",
+      "css": "Avancerad",
+      "linux": "Arch/Debian Avancerad",
+      "github": "Kompetent"
+    }
+  },
+  "contact": {
+    "header": "Kontakta mig",
+    "name": "Tjabo",
+    "title": "Fullstack Utvecklare",
+    "encouragement": "Hör gärna av dig om du är ute efter en utvecklare, om du har en fråga, eller om du bara vill chatta.",
+    "connect": "Anslut med mig"
+  },
+  "contact-form": {
+    "name": "namn",
+    "email": "email",
+    "subject": "ämne",
+    "message": "meddelande",
+    "submit": "Skicka Meddelande"
+  }
+}
