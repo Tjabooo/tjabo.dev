@@ -26,6 +26,11 @@ export default function Home() {
 			<Projects />
 			<Contact />
 			<SpeedInsights />
+			<footer>
+				<div className="flex flex-col items-center justify-center">
+					<p className="text-gray-500 text-sm">© {new Date().getFullYear()} Tjabooo</p>
+				</div>
+			</footer>
 		</div>
 	);
 }
