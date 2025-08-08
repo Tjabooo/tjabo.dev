@@ -60,17 +60,6 @@ const Navbar = () => {
 			}
 		>
 			<div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-				{/* <Link legacyBehavior href="/">
-					<a>
-						<Image
-							src={NavLogo}
-							alt="/"
-							height="60"
-							width="80"
-							className="cursor-pointer"
-						/>
-					</a>
-				</Link>*/}
 				<LanguageSwitcher />
 				<div className="flex items-center justify-center">
 					<ul style={{ color: `${linkColor}` }} className="hidden md:flex">
@@ -82,6 +71,11 @@ const Navbar = () => {
 						<Link href="#about">
 							<li className="ml-10 text-sm uppercase hover:text-[#8839ef]">
 								{t('nav.about')}
+							</li>
+						</Link>
+						<Link href="#education">
+							<li className="ml-10 text-sm uppercase hover:text-[#8839ef]">
+								{t('nav.education')}
 							</li>
 						</Link>
 						<Link href="#skills">
