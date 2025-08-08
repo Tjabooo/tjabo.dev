@@ -132,11 +132,6 @@ const Education = () => {
                             {t(`education.${key}.programme`)}
                           </p>
                         </div>
-                        <div className="md:hidden block mt-4">
-                          <p className="text-center text-[#b4b4b4] text-sm">
-                            {t(`education.${key}.programme`)}
-                          </p>
-                        </div>
                       </div>
                     </div>
                   </div>
