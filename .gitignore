@@ -30,3 +30,6 @@ yarn-error.log*
 
 # downloadables
 /public/assets/downloadables
+
+# deploy script
+deploy.sh
