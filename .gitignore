@@ -28,5 +28,5 @@ yarn-error.log*
 # local env files
 .env*.local
 
-# vercel
-.vercel
+# downloadables
+/public/assets/downloadables
