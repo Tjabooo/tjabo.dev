@@ -6,7 +6,7 @@ export default function LanguageSwitcher() {
   const { locale, locales, asPath } = router;
 
   return (
-    <div className="text-sm text-[#8839ef] font-medium">
+    <div className="text-sm text-[#8839ef] font-medium ml-2">
       {locales.map((lng, idx) => (
         <span key={lng}>
           <Link href={asPath} locale={lng}>
