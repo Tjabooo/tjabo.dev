@@ -39,16 +39,16 @@ const Navbar = () => {
 		setNav((prevState) => !prevState);
 	};
 
-	useEffect(() => {
-		const handleShadow = () => {
-			if (window.scrollY >= 90) {
-				setShadow(true);
-			} else {
-				setShadow(false);
-			}
-		};
-		window.addEventListener("scroll", handleShadow);
-	}, []);
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
 
 	return (
 		<div

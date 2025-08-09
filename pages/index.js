@@ -13,27 +13,35 @@ import { useTranslation } from "next-i18next";
 export default function Home() {
   const { t } = useTranslation('common');
 
-	return (
-		<div>
-			<Head>
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Head>
         <title>{t('header')}</title>
-				<link rel="icon" href="/favi.png" />
-			</Head>
-			<Main />
-			<About />
-			<Education />
-			<Skills />
-			<Projects />
-			<Contact />
-			<SpeedInsights />
-			<footer>
-				<div className="flex flex-col items-center justify-center">
-					<p className="text-gray-500 text-sm">© {new Date().getFullYear()} Tjabooo</p>
-				</div>
-			</footer>
-		</div>
-	);
+        <link rel="icon" href="/favi.png" />
+      </Head>
+
+      {/* Make main grow to fill the available vertical space */}
+      <main className="flex-1">
+        <Main />
+        <About />
+        <Education />
+        <Skills />
+        <Projects />
+        <Contact />
+        <SpeedInsights />
+      </main>
+
+      {/* <footer className="mt-auto">
+        <div className="flex flex-col items-center justify-center mb-4">
+          <p className="text-gray-500 text-sm">
+            © {new Date().getFullYear()} Tjabooo
+          </p>
+        </div>
+      </footer>*/}
+    </div>
+  );
 }
+
 
 export async function getStaticProps({ locale }) {
   return {
