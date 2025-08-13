@@ -1,6 +1,5 @@
-import React from "react";
 import ProjectItem from "./ProjectItem";
-import { FaPhp, FaRust, FaHtml5, FaJs, FaCss3, FaPython, FaReact, FaNodeJs } from "react-icons/fa";
+import { FaPhp, FaRust, FaHtml5, FaJs, FaCss3, FaPython, FaReact, FaNodeJs, FaJava } from "react-icons/fa";
 import { useTranslation } from "next-i18next";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -37,6 +36,11 @@ const Projects = () => {
 						title="bevy-fps-shooter"
 						projectUrl=""
 						langs={[<FaRust key="rust" />]}
+					/>
+					<ProjectItem
+					  title="pear2pear"
+						projectUrl=""
+						langs={[<FaJava key="java" />]}
 					/>
 				</div>
 			</div>

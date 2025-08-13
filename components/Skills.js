@@ -13,6 +13,7 @@ import Cs from "../public/assets/skills/cs.png";
 import Css from "../public/assets/skills/css.png";
 import NextJs from "../public/assets/skills/nextjs.png";
 import React from "../public/assets/skills/react.png";
+import Java from "../public/assets/skills/java.png";
 
 const skillsList = [
   {
@@ -29,6 +30,11 @@ const skillsList = [
     label: "C#",
     icon: Cs,
     levelKey: "cs",
+  },
+  {
+    label: "Java",
+    icon: Java,
+    levelKey: "java",
   },
   {
     label: "PHP",
