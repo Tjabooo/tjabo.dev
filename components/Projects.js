@@ -14,17 +14,16 @@ const Projects = () => {
 			  <h2 className="text-xl uppercase tracking-widest text-[#8839ef]">
           {t('projects.header')}
 			  </h2>
-          <p className="text-gray-600">{t('projects.notice')}</p>
 			</div>
 				<div className="grid md:grid-cols-2 gap-8">
 				  <ProjectItem
 						title="fitcheck-uf-app"
-						projectUrl=""
+						projectUrl="https://github.com/Tjabooo/fitcheck-uf-app"
 						langs={[<FaPhp key="php" />, <FaHtml5 key="html" />, <FaJs key="js" />, <FaCss3 key="css" />]}
 					/>
 					<ProjectItem
 						title="Tailcord"
-						projectUrl=""
+						projectUrl="https://github.com/Tjabooo/Tailcord"
 						langs={[<FaPython key="python" />]}
 					/>
 					<ProjectItem
@@ -34,12 +33,12 @@ const Projects = () => {
 					/>
 					<ProjectItem
 						title="bevy-fps-shooter"
-						projectUrl=""
+						projectUrl="https://github.com/Tjabooo/bevy-fps-shooter"
 						langs={[<FaRust key="rust" />]}
 					/>
 					<ProjectItem
 					  title="pear2pear"
-						projectUrl=""
+						projectUrl="https://github.com/Tjabooo/pear2pear"
 						langs={[<FaJava key="java" />]}
 					/>
 				</div>
