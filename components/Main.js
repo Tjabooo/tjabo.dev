@@ -24,7 +24,7 @@ const Main = () => {
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <motion.div initial="hidden" animate="visible" variants={variants}>
           <p className="uppercase text-sm tracking-widest text-gray-400">
-            Gay, Alcoholic, Schizophrenic
+            schizophrenic alcoholic programmer
           </p>
           <h1 className="py-4 text-gray-300 min-h-[2.5rem] flex items-center justify-center">
             <span>
@@ -66,7 +66,7 @@ const Main = () => {
               />
             </span>
           </h1>
-          <p className="py-4 text-gray-400 max-w-[70%] m-auto">
+          <p className="py-4 text-gray-400 max-w-[100%] m-auto">
             {t("home.goal")}
           </p>
           <div className="flex justify-between items-center max-w-[330px] m-auto py-4">

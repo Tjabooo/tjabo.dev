@@ -1,5 +1,6 @@
 {
-  "header": "Tjabo | Fullstack Developer",
+
+    "header": "Tjabo | Fullstack Developer",
   "nav": {
     "home": "home",
     "about": "about me",
@@ -13,12 +14,12 @@
     "greeting": "Hello, I'm ",
     "name": "Tjabo",
     "title": "A Fullstack Developer",
-    "goal": "my goal is dying of alcohol poisoning before i start balding"
+    "goal": "My goal is in life to never start balding"
   },
   "about": {
     "header": "About me",
-    "p1": "qwertyuiopasdfghjklzxcvbnm",
-    "p2": "hejjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
+    "p1": "I am a Swedish university student with a passion for programming and anything tech related. I have experience in a variety of programming languages and frameworks, and I am always eager to learn new technologies and improve my skills.",
+    "p2": "During my free time I spend most of my time enjoying life, but my passion lies in programming and working on hardware projects. ",
     "p3": "då",
     "p4": "blehh blehehhheh blehb leh"
   },
