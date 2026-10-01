@@ -22,6 +22,11 @@ const Projects = () => {
 						langs={[<FaPhp key="php" />, <FaHtml5 key="html" />, <FaJs key="js" />, <FaCss3 key="css" />]}
 					/>
 					<ProjectItem
+						title="Marquee"
+						projectUrl="https://github.com/Tjabooo/marquee"
+						langs={[<FaJs key="js" />, <FaHtml5 key="html" />, <FaJs key="js" />, <FaCss3 key="css" />]}
+					/>
+					<ProjectItem
 						title="Tailcord"
 						projectUrl="https://github.com/Tjabooo/Tailcord"
 						langs={[<FaPython key="python" />]}
