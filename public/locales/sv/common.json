@@ -1,46 +1,47 @@
 {
-  "header": "Tjabo | Fullstack Utvecklare",
+  "header": "Tjabo | Fullstackutvecklare",
   "nav": {
     "home": "hem",
     "about": "om mig",
     "education": "utbildning",
     "skills": "kunskaper",
     "projects": "projekt",
-    "contact": "kontakta mig",
+    "contact": "kontakt",
     "resume": "CV"
   },
   "home": {
-    "greeting": "Hej, Jag Är ",
+    "tagline": "KTH-student & utvecklare",
+    "greeting": "Hej, jag är ",
     "name": "Tjabo",
-    "title": "En Fullstack Utvecklare",
-    "goal": "Mitt mål i livet är att aldrig bli flintis"
+    "title": "En fullstackutvecklare",
+    "goal": "Jag bygger webbappar, verktyg och egenhostade projekt, och letar alltid efter nästa sak att lära mig."
   },
   "about": {
-    "header": "About me",
-    "p1": "qwertyuiopasdfghjklzxcvbnm",
-    "p2": "hejjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
-    "p3": "då",
-    "p4": "blehh blehehhheh blehb leh"
+    "header": "Om mig",
+    "p1": "Jag studerar informations- och kommunikationsteknik på KTH i Stockholm. Jag har programmerat i flera år och gillar att jobba med hela kedjan, från design och frontend till backend och servrarna allt körs på.",
+    "p2": "Jag har erfarenhet av en rad olika språk och ramverk, bland annat Python, JavaScript, React, Next.js och PHP, och just nu lär jag mig programmering på lägre nivå i C, Rust och RISC-V-assembler.",
+    "p3": "På fritiden jobbar jag gärna med egna projekt: bygger hemsidor, mekar med hårdvara och kör saker på min egen hemserver, bland annat den här sidan.",
+    "p4": "Jag är alltid sugen på att lära mig ny teknik och anta nya utmaningar. Kolla gärna in mina projekt nedan eller hör av dig."
   },
-    "education": {
+  "education": {
     "header": "Utbildning",
     "aso": {
-      "name": "Åsö Grundskola",
+      "name": "Åsö grundskola",
       "programme": "Årskurs 7-9",
       "location": "Stockholm, Sverige",
-      "time": "Augusti 2019 - Juli 2022"
+      "time": "augusti 2019 - juli 2022"
     },
     "ssis": {
       "name": "Stockholm Science & Innovation School",
-      "programme": "Information- och medieteknik",
+      "programme": "Informations- och medieteknik",
       "location": "Stockholm, Sverige",
-      "time": "Juli 2022 - Augusti 2025"
+      "time": "juli 2022 - augusti 2025"
     },
     "kth": {
-      "name": "KTH Royal Institute of Technology",
-      "programme": "Kandidatprogram, Information- och kommunikationsteknik",
+      "name": "KTH Kungliga Tekniska högskolan",
+      "programme": "Kandidatprogram, informations- och kommunikationsteknik",
       "location": "Stockholm, Sverige",
-      "time": "Augusti 2025 - Juli 2028"
+      "time": "augusti 2025 - juli 2028"
     }
   },
   "skills": {
@@ -51,7 +52,7 @@
       "cs": "Nybörjare",
       "c": "Nybörjare",
       "java": "Nybörjare",
-      "php": "Nybörjare",
+      "php": "Kompetent",
       "nextjs": "Kompetent",
       "react": "Kompetent",
       "nodejs": "Kompetent",
@@ -63,18 +64,18 @@
     }
   },
   "contact": {
-    "header": "Kontakta mig",
+    "header": "Kontakt",
     "name": "Tjabo",
-    "title": "Fullstack Utvecklare",
-    "encouragement": "Hör gärna av dig om du är ute efter en utvecklare, om du har en fråga, eller om du bara vill chatta.",
-    "connect": "Anslut med mig"
+    "title": "Fullstackutvecklare",
+    "encouragement": "Hör gärna av dig om du letar efter en utvecklare, har en fråga eller bara vill höra av dig.",
+    "connect": "Hitta mig här"
   },
   "contact-form": {
     "name": "namn",
-    "email": "email",
+    "email": "e-post",
     "subject": "ämne",
     "message": "meddelande",
-    "submit": "Skicka Meddelande"
+    "submit": "Skicka meddelande"
   },
   "projects": {
     "header": "Projekt",

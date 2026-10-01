@@ -1,6 +1,5 @@
 {
-
-    "header": "Tjabo | Fullstack Developer",
+  "header": "Tjabo | Fullstack Developer",
   "nav": {
     "home": "home",
     "about": "about me",
@@ -11,17 +10,18 @@
     "resume": "Resume"
   },
   "home": {
+    "tagline": "KTH student & developer",
     "greeting": "Hello, I'm ",
     "name": "Tjabo",
     "title": "A Fullstack Developer",
-    "goal": "My goal is in life to never start balding"
+    "goal": "I build web apps, tools and self-hosted projects, and I'm always looking for the next thing to learn."
   },
   "about": {
     "header": "About me",
-    "p1": "I am a Swedish university student with a passion for programming and anything tech related. I have experience in a variety of programming languages and frameworks, and I am always eager to learn new technologies and improve my skills.",
-    "p2": "During my free time I spend most of my time enjoying life, but my passion lies in programming and working on hardware projects. ",
-    "p3": "då",
-    "p4": "blehh blehehhheh blehb leh"
+    "p1": "I'm a student at KTH Royal Institute of Technology in Stockholm, studying Information and Communication Technology. I've been programming for years and enjoy working across the whole stack, from frontend design to backend logic and the servers everything runs on.",
+    "p2": "I have experience with a range of languages and frameworks, including Python, JavaScript, React, Next.js and PHP, and I'm currently learning lower-level programming in C, Rust and RISC-V assembly.",
+    "p3": "Outside of school I like working on my own projects: building websites, tinkering with hardware, and running things on my own home server, including this site.",
+    "p4": "I'm always eager to learn new technologies and take on new challenges. Feel free to look through my projects below or get in touch."
   },
   "education": {
     "header": "Education",
@@ -68,14 +68,14 @@
     "name": "Tjabo",
     "title": "Fullstack Developer",
     "encouragement": "Feel free to reach out if you're looking for a developer, have a question, or just want to connect.",
-    "connect": "Connect With Me"
+    "connect": "Connect with me"
   },
   "contact-form": {
     "name": "name",
     "email": "email",
     "subject": "subject",
     "message": "message",
-    "submit": "Send Message"
+    "submit": "Send message"
   },
   "projects": {
     "header": "Projects",
