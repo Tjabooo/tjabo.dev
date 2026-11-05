@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { notFound } from "next/navigation";
 import "../globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -12,7 +13,9 @@ import { localized } from "@/lib/view";
 const mono = localFont({ src: "../fonts/JetBrainsMono-var.woff2", variable: "--font-mono", weight: "100 800", display: "swap" });
 const display = localFont({ src: "../fonts/ArchivoExpanded-Black.woff2", variable: "--font-display", weight: "900", display: "swap", preload: true });
 
-export const dynamicParams = false;
+// No dynamicParams = false here: in a layout it applies to every route below it and can't be
+// overridden, so repos created after the build would 404 at /projects/<repo>. proxy.js only
+// ever produces /en and /sv; anything else is rejected in the layout itself.
 export const revalidate = 3600;
 
 export function generateStaticParams() {
@@ -46,6 +49,7 @@ const BOOT = `(function(){var d=document.documentElement;d.classList.add('js');t
 
 export default async function RootLayout({ children, params }) {
 	const { lang } = await params;
+	if (!LANGS.includes(lang)) notFound();
 	const data = await getPortfolio();
 	const items = data.repos.map((r) => ({
 		name: r.name,
