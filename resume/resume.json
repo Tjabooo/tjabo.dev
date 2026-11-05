@@ -25,8 +25,8 @@
 	},
 	"en": {
 		"doc": "Résumé",
-		"role": "ICT student at KTH · builds and runs self-hosted software",
-		"summary": "Second-year **Information and Communications Technology** student at KTH who learns by building. I design, ship and run my own software end to end: a **media server that friends and family use every day**, low-level **Linux and Vulkan tooling** for gaming, and the tools behind a three-machine home network. At home anywhere from C and Rust to Node.js web apps and Windows server operations.",
+		"role": "Developer in Stockholm · builds and runs self-hosted software",
+		"summary": "Developer who learns by building. I studied **Information and Communications Technology** at KTH, and I design, ship and run my own software end to end: a **media server that friends and family use every day**, low-level **Linux and Vulkan tooling** for gaming, and the tools behind a three-machine home network. At home anywhere from C and Rust to Node.js web apps and Windows server operations.",
 		"sections": {
 			"experience": "Experience",
 			"projects": "Selected projects",
@@ -35,19 +35,29 @@
 		},
 		"experience": [
 			{
-				"title": "Private Tutor",
-				"org": "Allakando",
-				"when": "Apr 2025 – Jul 2025",
+				"title": "Machine Operator",
+				"org": "Apotekstjänst",
+				"when": "Jun 2026 – now",
+				"meta": "Lidingö · started as Production Pharmacist over the summer (Jun – Jul 2026)",
 				"points": [
-					"Tutored upper-secondary students one-on-one, in person and online, in the subjects they found hardest, with personal study plans, homework and steady motivation."
+					"Run **VMI INDIVION** machines that pack patients' medicines into daily-dose pouches at high volume.",
+					"Change medication canisters, monitor runs and clear machine stops under strict quality and hygiene routines."
 				]
 			},
 			{
-				"title": "Survey Interviewer",
+				"title": "Private Study Coach",
+				"org": "Allakando",
+				"when": "Apr 2025 – Jul 2025",
+				"points": [
+					"Tutored upper-secondary students one-on-one, in person and online, with personal study plans and homework."
+				]
+			},
+			{
+				"title": "Research Interviewer",
 				"org": "City of Stockholm",
 				"when": "Jul 2024",
 				"points": [
-					"Interviewed residents and businesses across inner-city Stockholm about their finances in a three-week team survey; the data fed the city's decisions on improvements."
+					"Interviewed residents and businesses in inner-city Stockholm about their finances, as input for the city's planning."
 				]
 			}
 		],
@@ -92,8 +102,8 @@
 		"education": [
 			{
 				"title": "KTH Royal Institute of Technology",
-				"when": "Aug 2025 – Jun 2028",
-				"text": "BSc, Information and Communications Technology (180 credits)"
+				"when": "Aug 2025 – Oct 2026",
+				"text": "Information and Communications Technology (BSc programme), studied 2025–2026"
 			},
 			{
 				"title": "Stockholm Science & Innovation School",
@@ -127,8 +137,8 @@
 	},
 	"sv": {
 		"doc": "CV",
-		"role": "IKT-student på KTH · bygger och driver egenhostad mjukvara",
-		"summary": "Läser andra året på **Informations- och kommunikationsteknik** på KTH och lär mig bäst genom att bygga. Jag designar, levererar och driver min egen mjukvara hela vägen: en **mediaserver som vänner och familj använder varje dag**, **Linux- och Vulkan-verktyg** på låg nivå för spel, och verktygen bakom ett hemnätverk med tre datorer. Hemma i allt från C och Rust till Node.js-webbappar och drift av Windows-servrar.",
+		"role": "Utvecklare i Stockholm · bygger och driver egenhostad mjukvara",
+		"summary": "Utvecklare som lär sig bäst genom att bygga. Jag har läst **Informations- och kommunikationsteknik** på KTH, och jag designar, levererar och driver min egen mjukvara hela vägen: en **mediaserver som vänner och familj använder varje dag**, **Linux- och Vulkan-verktyg** på låg nivå för spel, och verktygen bakom ett hemnätverk med tre datorer. Hemma i allt från C och Rust till Node.js-webbappar och drift av Windows-servrar.",
 		"sections": {
 			"experience": "Erfarenhet",
 			"projects": "Utvalda projekt",
@@ -137,19 +147,29 @@
 		},
 		"experience": [
 			{
-				"title": "Privatlärare",
-				"org": "Allakando",
-				"when": "apr 2025 – jul 2025",
+				"title": "Maskinoperatör",
+				"org": "Apotekstjänst",
+				"when": "jun 2026 – nu",
+				"meta": "Lidingö · började som produktionsfarmaceut under sommaren (jun – jul 2026)",
 				"points": [
-					"Gav gymnasieelever enskild läxhjälp, på plats och online, i de ämnen de hade svårast med, med personliga studieplaner, läxor och mycket motivation."
+					"Kör **VMI INDIVION**-maskiner som packar patienters läkemedel i dospåsar (storskalig läkemedelsproduktion).",
+					"Byter läkemedelskassetter, övervakar körningar och åtgärdar stopp enligt strikta kvalitets- och hygienrutiner."
 				]
 			},
 			{
-				"title": "Intervjuare",
+				"title": "Studiecoach",
+				"org": "Allakando",
+				"when": "apr 2025 – jul 2025",
+				"points": [
+					"Gav gymnasieelever enskild läxhjälp, på plats och online, i deras svåraste ämnen, med personliga studieplaner och läxor."
+				]
+			},
+			{
+				"title": "Intervjuare (undersökning)",
 				"org": "Stockholms stad",
 				"when": "jul 2024",
 				"points": [
-					"Intervjuade privatpersoner och företag i innerstaden om deras ekonomi i en treveckors undersökning i team; underlaget gick till stadens beslut om förbättringar."
+					"Intervjuade privatpersoner och företag i innerstaden om deras ekonomi, som underlag för stadens planering."
 				]
 			}
 		],
@@ -194,8 +214,8 @@
 		"education": [
 			{
 				"title": "KTH Kungliga Tekniska högskolan",
-				"when": "aug 2025 – jun 2028",
-				"text": "Kandidatprogram, Informations- och kommunikationsteknik (180 hp)"
+				"when": "aug 2025 – okt 2026",
+				"text": "Informations- och kommunikationsteknik (kandidatprogram), studier 2025–2026"
 			},
 			{
 				"title": "Stockholm Science & Innovation School",
