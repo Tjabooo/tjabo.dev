@@ -1,0 +1,98 @@
+{
+	"$comment": "Curation only. Every public, non-fork repo of `owner` shows up on its own; this file picks what is featured, hidden or worded differently.",
+	"owner": "Tjabooo",
+	"siteUrl": "https://tjabo.dev",
+	"name": "Oliver",
+	"handle": "tjabo",
+	"contact": {
+		"email": null,
+		"github": "https://github.com/Tjabooo",
+		"linkedin": "https://www.linkedin.com/in/oliver-j-p-i-westin-6670902a5/",
+		"instagram": "https://instagram.com/olliiee__",
+		"discord": "isidorjp"
+	},
+	"featured": [
+		"marquee",
+		"archfleet",
+		"clipper",
+		"ember-latency",
+		"agent-mesh",
+		"screentime"
+	],
+	"hidden": [
+		"Tjabooo",
+		"fitcheck-uf-app",
+		"SSIS-Lunch-Tickets",
+		"22olwe",
+		"pear2pear",
+		"facial-recog",
+		"fetch-crosshair"
+	],
+	"overrides": {
+		"marquee": {
+			"tagline": "A self-hosted, phone-first media server for friends and family.",
+			"tagline_sv": "En egenhostad mediaserver för vänner och familj, byggd för mobilen först.",
+			"description_sv": "Egenhostad mediaapp byggd för mobilen först, med TMDB-sök, qBittorrent-förlopp, casting via DLNA/AirPlay och automatisk konvertering till MP4.",
+			"accent": "#ff8c1a"
+		},
+		"archfleet": {
+			"tagline": "Every machine at home in one terminal, over plain SSH.",
+			"tagline_sv": "Alla datorer hemma i en terminal, över vanlig SSH.",
+			"description_sv": "Terminalpanel för hemmets datorer över SSH: status, wake-on-LAN, processer, Hyprland, filer, delade urklipp (SUPER+V) och Arch-underhåll.",
+			"accent": "#f5a524"
+		},
+		"clipper": {
+			"tagline": "Medal/ShadowPlay, minus the bloat. Clips land on my own server.",
+			"tagline_sv": "Som Medal/ShadowPlay fast lätt. Klippen hamnar på min egen server.",
+			"description_sv": "Lätt ersättare för Medal/ShadowPlay på Linux (gpu-screen-recorder) och Windows (OBS): alltid-på replay-buffert, granskningskö, trimmer och klipp till din hemserver.",
+			"accent": "#e5484d"
+		},
+		"ember-latency": {
+			"tagline": "Click-to-photon latency for any Vulkan game, live in MangoHud.",
+			"tagline_sv": "Klick-till-pixel-latens för alla Vulkan-spel, live i MangoHud.",
+			"description_sv": "Klick-till-pixel-latens för alla Vulkan-spel i MangoHud på Linux, utan prestandakostnad.",
+			"accent": "#ff4d1f"
+		},
+		"agent-mesh": {
+			"tagline": "One brain for Claude Code and Codex across all my machines.",
+			"tagline_sv": "En hjärna för Claude Code och Codex på alla mina datorer.",
+			"description_sv": "En hjärna för Claude Code och Codex på alla dina datorer: delad AGENTS.md, minne och inställningar genom ett git-repo du själv äger.",
+			"accent": "#f5a524"
+		},
+		"screentime": {
+			"tagline": "iPhone-style Screen Time for Hyprland.",
+			"tagline_sv": "Skärmtid som på iPhone, fast för Hyprland.",
+			"description_sv": "Skärmtid som på iPhone, för Hyprland: spårar appanvändning, upplåsningar och inaktivitet, med --json-utdata och valfri push.",
+			"accent": "#ff8c1a"
+		},
+		"cs2-presence": {
+			"description_sv": "Visar native Linux-CS2 som din Discord-aktivitet (Discord upptäcker inte spelet själv)."
+		},
+		"audition": {
+			"description_sv": "\"Behåll ändringarna?\" för vilken konfigfil som helst: en Hyprland-, sway- eller Waybar-ändring återställs av sig själv om du inte behåller den."
+		},
+		"steam-gamemode-all": {
+			"description_sv": "Kör alla Steam-spel med Feral GameMode: lägger till gamemoderun i varje spels startalternativ och behåller dem du redan har."
+		},
+		"codex-ssh-windows": {
+			"description_sv": "Använd en Windows-dator som SSH-värd i Codex skrivbordsapp, utan att ändra vanliga SSH-inloggningar."
+		},
+		"dotfiles": {
+			"tagline": "neon: the laptop's Hyprland rice.",
+			"tagline_sv": "neon: laptopens Hyprland-rice.",
+			"description_sv": "neon, Hyprland-ricen på min laptop: midnattslila syskon till ember."
+		},
+		"bevy-fps-shooter": {
+			"description_sv": "Enkel siktesträning i FPS-stil, gjord i Rust med Bevy."
+		},
+		"Tailcord": {
+			"description_sv": "Visar enheters status i din Discord-bio via Tailscale."
+		},
+		"tjabo.dev": {
+			"tagline": "This site. Synced with GitHub on its own.",
+			"tagline_sv": "Den här sajten. Synkar med GitHub av sig själv.",
+			"description": "My portfolio: a WebGL ember hero, a command palette, a hidden terminal and a project grid that keeps itself in sync with GitHub.",
+			"description_sv": "Min portfolio: en WebGL-glödhero, en kommandopalett, en gömd terminal och ett projektgaller som håller sig synkat med GitHub."
+		}
+	}
+}
