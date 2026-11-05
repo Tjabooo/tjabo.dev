@@ -24,6 +24,8 @@ My portfolio: a hand-written WebGL ember hero, a ⌘K command palette, a hidden 
 - **Shareable:** generated Open Graph images for every page and project, `sitemap.xml`, `robots.txt`, an RSS feed of releases (`/feed.xml`) and JSON-LD (`Person`, `SoftwareSourceCode`).
 - **Contact form → Discord** through a webhook, rate limited per IP (3 per 5 minutes), with a honeypot. Visitors can never ping `@everyone`.
 
+![The ⌘K command palette: sections first, then every project with its description](docs/palette.png)
+
 ## Stack
 
 Next.js 16 (App Router) and React 19, plain CSS, and three server-only libraries: `marked` + `highlight.js` for READMEs and `sanitize-html` to keep them safe. No CSS framework, no animation library, no WebGL library. Fonts (JetBrains Mono, Archivo Expanded) are self-hosted subsets. Initial JS on a modern browser is about 158 kB gzipped, ~116 kB of which is React and Next itself; the shader, palette and terminal load lazily. Lighthouse: performance 96 (mobile) / 100 (desktop); accessibility, best practices and SEO 97–100.
