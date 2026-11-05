@@ -4,6 +4,7 @@ import "../globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import CommandHost from "@/components/CommandHost";
+import { resumeUrl } from "@/lib/resume";
 import Effects from "@/components/Effects";
 import { config, LANGS, SITE_URL, localePath } from "@/lib/config";
 import { getPortfolio } from "@/lib/github";
@@ -73,7 +74,7 @@ export default async function RootLayout({ children, params }) {
 				<Nav lang={lang} />
 				{children}
 				<Footer lang={lang} fetchedAt={data.fetchedAt} />
-				<CommandHost lang={lang} items={items} contact={config.contact} totals={data.totals} />
+				<CommandHost lang={lang} items={items} contact={config.contact} totals={data.totals} resume={resumeUrl(lang)} />
 				<Effects />
 			</body>
 		</html>

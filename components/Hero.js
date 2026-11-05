@@ -3,11 +3,12 @@ import TimeAgo from "./TimeAgo";
 import { Clock, HeroShader } from "./HeroIslands";
 import { config } from "@/lib/config";
 import { dict } from "@/lib/i18n";
+import { resumeUrl } from "@/lib/resume";
 
 export default function Hero({ lang, data }) {
 	const t = dict(lang).hero;
 	const lastPush = data.repos.reduce((m, r) => (r.pushedAt > m ? r.pushedAt : m), "");
-	const resume = lang === "sv" ? "/sv-resume.pdf" : "/en-resume.pdf";
+	const resume = resumeUrl(lang);
 	return (
 		<section className="hero" aria-labelledby="hero-title">
 			<div className="hero-bg" />

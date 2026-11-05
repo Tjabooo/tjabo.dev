@@ -20,7 +20,7 @@ export function score(query, text) {
 	return i === q.length ? total : -1;
 }
 
-export default function Palette({ lang, items, contact, onClose, onTerminal }) {
+export default function Palette({ lang, items, contact, resume, onClose, onTerminal }) {
 	const t = dict(lang).palette;
 	const router = useRouter();
 	const pathname = usePathname();
@@ -55,7 +55,7 @@ export default function Palette({ lang, items, contact, onClose, onTerminal }) {
 		}));
 		const actions = [
 			{ id: "github", group: t.actions, label: t.github, icon: "github", run: () => { onClose(); window.open(contact.github, "_blank", "noopener"); } },
-			{ id: "resume", group: t.actions, label: t.resume, icon: "file", run: () => { onClose(); window.open(lang === "sv" ? "/sv-resume.pdf" : "/en-resume.pdf", "_blank", "noopener"); } },
+			{ id: "resume", group: t.actions, label: t.resume, icon: "file", run: () => { onClose(); window.open(resume || (lang === "sv" ? "/sv-resume.pdf" : "/en-resume.pdf"), "_blank", "noopener"); } },
 			{ id: "lang", group: t.actions, label: t.lang, icon: "lang", keywords: "language språk svenska english", run: () => go(lang === "sv" ? rest : rest === "/" ? "/sv" : `/sv${rest}`) },
 			contact.email
 				? { id: "email", group: t.actions, label: t.email, desc: contact.email, icon: "mail", keywords: "mail", run: async () => { await copyText(contact.email); flash(t.copied); } }
@@ -68,7 +68,7 @@ export default function Palette({ lang, items, contact, onClose, onTerminal }) {
 		].filter(Boolean);
 		return [...nav, ...projects, ...actions];
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [items, lang, rest, motionOn]);
+	}, [items, lang, rest, motionOn, resume]);
 
 	const results = useMemo(() => {
 		if (!q.trim()) return commands;
