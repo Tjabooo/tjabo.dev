@@ -10,10 +10,11 @@ next-env.d.ts
 # GitHub cache (rebuilt on demand)
 /.cache/
 
-# deploy (geofront): releases, logs, the live junction
+# deploy.ps1: releases, the live junction, logs and the shared GitHub cache
 /releases/
 /current
 /logs/
+/cache/
 
 # env files: secrets live only on the server
 .env
