@@ -65,7 +65,8 @@ export default async function ProjectPage({ params }) {
 	const { prev, next } = neighbours(repo, data.repos);
 	const base = lang === "sv" ? "/sv" : "";
 	const style = { "--accent": repo.accent || "#ff8c1a" };
-	const ciLabel = p.ci[repo.ci ?? "null"];
+	// Without a token (REST fallback) CI status is unknown, not "none".
+	const ciLabel = data.mode === "graphql" ? p.ci[repo.ci ?? "null"] : "—";
 
 	return (
 		<main id="main" className="page" style={style}>
@@ -110,7 +111,7 @@ export default async function ProjectPage({ params }) {
 						<div><dt>{p.languages}</dt><dd>{repo.language ? <><i className="dot" style={{ "--c": repo.language.color }} />{repo.language.name}</> : "—"}</dd></div>
 						<div><dt>{p.license}</dt><dd>{repo.license || "—"}</dd></div>
 						<div><dt>{p.updated}</dt><dd><TimeAgo date={repo.pushedAt} lang={lang} /></dd></div>
-						<div><dt>ci</dt><dd><i className={`ci ${repo.ci || ""}`} />{ciLabel}</dd></div>
+						<div><dt>ci</dt><dd>{data.mode === "graphql" ? <i className={`ci ${repo.ci || ""}`} /> : null}{ciLabel}</dd></div>
 					</dl>
 				</div>
 			</header>
