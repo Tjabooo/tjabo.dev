@@ -1,40 +1,48 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import AboutImg from "../public/assets/me.jpg";
-import SignatureImg from "../public/assets/signature.png";
-import { useTranslation } from 'next-i18next';
+import { dict } from "@/lib/i18n";
 
-const About = () => {
-  const { t } = useTranslation('common'); // using 'common.json'
+const SWATCHES = ["#120d0a", "#1b1410", "#3a2c22", "#7a675a", "#b2a397", "#d8cbbf", "#ff4d1f", "#ff8c1a", "#f5a524", "#e5484d"];
 
+export default function About({ lang, totals }) {
+	const t = dict(lang).about;
+	const stack = totals.languages.slice(0, 6).map((l) => l.name.toLowerCase()).join(", ") || "python, javascript, c";
+	const rows = [
+		[t.spec.user, "oliver@tjabo"],
+		[t.spec.based, t.spec.basedValue],
+		[t.spec.status, t.spec.statusValue],
+		[t.spec.os, t.spec.osValue],
+		[t.spec.focus, t.spec.focusValue],
+		[t.spec.stack, stack],
+		[t.spec.rig, "ryzen 7 9800x3d · rx 9070 xt"],
+	];
 	return (
-		<div id="about" className="w-full md:h-1/2 p-2 flex items-center py-16">
-			<div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
-				<div className="col-span-2 ml-[10%] mr-[10%]">
-					<h2 className="uppercase text-xl tracking-widest text-[#8839ef]">
-						{t('about.header')}
-					</h2>
-					<p className="py-2 text-gray-300 text-xl text-justify">
-						{t('about.p1')}
-					</p>
-					<p className="py-2 text-gray-300 text-xl text-justify">
-						{t('about.p2')}
-					</p>
-					<p className="py-2 text-gray-300 text-xl text-justify">
-					{t('about.p3')}
-					</p>
-					<p className="py-2 text-gray-300 text-xl text-justify">
-					{t('about.p4')}
-					</p>
-					<Image src={SignatureImg} className="rounded-xl w-auto h-auto" alt="signature" />
+		<section className="section" id="about" aria-labelledby="about-title">
+			<div className="wrap">
+				<div className="section-head">
+					<p className="kicker" data-reveal><span className="hexdot" />{t.kicker}</p>
+					<h2 className="h2" id="about-title" data-reveal>{t.title}</h2>
 				</div>
-				<div className="w-full h-auto m-auto shadow-xl shadow-gray-900 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
-					<Image src={AboutImg} className="rounded-xl" alt="/" />
+				<div className="about-grid">
+					<div className="about-copy">
+						<p data-reveal>{t.p1}</p>
+						<p data-reveal style={{ "--d": 1 }}>{t.p2}</p>
+						<p data-reveal style={{ "--d": 2 }}>{t.p3}</p>
+					</div>
+					<div className="spec" data-reveal style={{ "--d": 1 }}>
+						<div className="spec-bar" aria-hidden="true"><i /><i /><i /><span>~ ❯ neofetch</span></div>
+						<div className="spec-body">
+							<div className="hexgrid" style={{ position: "absolute", inset: 0, opacity: 0.4, maskImage: "linear-gradient(to left, #000, transparent 70%)" }} />
+							<dl>
+								{rows.map(([k, v]) => (
+									<div key={k} style={{ display: "contents" }}><dt>{k}</dt><dd>{v}</dd></div>
+								))}
+							</dl>
+							<div className="swatches" aria-hidden="true">
+								{SWATCHES.map((c) => <span key={c} style={{ "--c": c }} />)}
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
-};
-
-export default About;
+}
