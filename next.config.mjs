@@ -1,8 +1,16 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+// Each release folder is its own project root (deploy.ps1 builds inside the git checkout's releases\).
+const root = path.dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	outputFileTracingRoot: root,
+	turbopack: { root },
 	reactStrictMode: true,
 	poweredByHeader: false,
-	// deploy.ps1 builds into a staging folder; the running site keeps serving the last good build.
+	// Build output folder (override with NEXT_DIST_DIR, e.g. for side-by-side test builds).
 	distDir: process.env.NEXT_DIST_DIR || ".next",
 	images: {
 		formats: ["image/avif", "image/webp"],
