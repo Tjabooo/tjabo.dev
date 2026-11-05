@@ -95,6 +95,19 @@ npm run build && npm run check   # production build, then a smoke test of the ke
 
 Needs Node 22.18 or newer. CI runs the tests, the build and the smoke test on every push.
 
+### Résumé
+
+`public/en-resume.pdf` and `public/sv-resume.pdf` (the Résumé button and ⌘K action) are built from
+`resume/resume.json`: one shared block (name, contact links) plus one block per language. Edit it, then:
+
+```sh
+npm run resume            # writes resume/out/{en,sv}.html, then prints both A4 PDFs with Chrome or Edge
+npm run resume -- --html  # HTML only, to print on another machine (CHROME=/path/to/chrome picks the browser)
+```
+
+The HTML embeds the site's own fonts (Archivo Expanded, JetBrains Mono) plus a Noto Sans subset in `resume/fonts`,
+so it prints the same anywhere. Keep it to one page: `pdfinfo public/en-resume.pdf | grep Pages`.
+
 ## Deploy
 
 The site runs on a Windows box behind Cloudflare, as a scheduled task that starts at boot. One command deploys:

@@ -1,0 +1,230 @@
+{
+	"$comment": "Source for public/en-resume.pdf and public/sv-resume.pdf. Edit, then run `node scripts/resume.js` (needs Chrome or Edge).",
+	"common": {
+		"name": "Oliver Westin",
+		"contact": [
+			{
+				"label": {
+					"en": "Stockholm, Sweden",
+					"sv": "Stockholm"
+				}
+			},
+			{
+				"label": "tjabo.dev",
+				"url": "https://tjabo.dev"
+			},
+			{
+				"label": "github.com/Tjabooo",
+				"url": "https://github.com/Tjabooo"
+			},
+			{
+				"label": "linkedin.com/in/oliver-j-p-i-westin",
+				"url": "https://www.linkedin.com/in/oliver-j-p-i-westin-6670902a5/"
+			}
+		]
+	},
+	"en": {
+		"doc": "Résumé",
+		"role": "ICT student at KTH · builds and runs self-hosted software",
+		"summary": "Second-year **Information and Communications Technology** student at KTH who learns by building. I design, ship and run my own software end to end: a **media server that friends and family use every day**, low-level **Linux and Vulkan tooling** for gaming, and the tools behind a three-machine home network. At home anywhere from C and Rust to Node.js web apps and Windows server operations.",
+		"sections": {
+			"experience": "Experience",
+			"projects": "Selected projects",
+			"education": "Education",
+			"skills": "Skills"
+		},
+		"experience": [
+			{
+				"title": "Private Tutor",
+				"org": "Allakando",
+				"when": "Apr 2025 – Jul 2025",
+				"points": [
+					"Tutored upper-secondary students one-on-one, in person and online, in the subjects they found hardest, with personal study plans, homework and steady motivation."
+				]
+			},
+			{
+				"title": "Survey Interviewer",
+				"org": "City of Stockholm",
+				"when": "Jul 2024",
+				"points": [
+					"Interviewed residents and businesses across inner-city Stockholm about their finances in a three-week team survey; the data fed the city's decisions on improvements."
+				]
+			}
+		],
+		"projects": [
+			{
+				"title": "Marquee",
+				"url": "https://tjabo.dev/projects/marquee",
+				"when": "2026 – now",
+				"wide": true,
+				"text": "Self-hosted, phone-first media server that I run around the clock for friends and family: one-press downloads, Watch Together rooms, casting to TVs (DLNA/AirPlay), automatic MP4 conversion, subtitle auto-sync and frame-exact clip editing. Hardened after a security audit (sign-in, CSRF, least-privilege service); public release v1.1.",
+				"stack": "Node.js 22 (no dependencies) · FFmpeg · SSE · qBittorrent API · TMDB · Windows service"
+			},
+			{
+				"title": "ember-latency",
+				"url": "https://tjabo.dev/projects/ember-latency",
+				"when": "2026",
+				"text": "Vulkan layer that measures real click-to-photon latency in any game, from the input event to the frame on screen, live in MangoHud with no measurable FPS cost.",
+				"stack": "C · Vulkan · VK_EXT_present_timing · Linux evdev"
+			},
+			{
+				"title": "Archfleet",
+				"url": "https://tjabo.dev/projects/archfleet",
+				"when": "2026",
+				"text": "Terminal dashboard for every machine at home over plain SSH: status, wake-on-LAN, processes, files, and one clipboard history shared between Linux and Windows.",
+				"stack": "Python · Textual · SSH · PowerShell"
+			},
+			{
+				"title": "Clipper",
+				"url": "https://tjabo.dev/projects/clipper",
+				"when": "2026",
+				"text": "Lightweight replacement for Medal/ShadowPlay: always-on replay buffer, review queue, trimmer, and clips stored on my own server instead of a cloud.",
+				"stack": "Python · gpu-screen-recorder · OBS · FFmpeg"
+			},
+			{
+				"title": "agent-mesh",
+				"url": "https://tjabo.dev/projects/agent-mesh",
+				"when": "2026",
+				"text": "Gives AI coding agents (Claude Code, Codex) one shared set of instructions, memory and settings across three machines, synced through a git repo over SSH.",
+				"stack": "Python · Git · SSH · systemd"
+			}
+		],
+		"education": [
+			{
+				"title": "KTH Royal Institute of Technology",
+				"when": "Aug 2025 – Jun 2028",
+				"text": "BSc, Information and Communications Technology (180 credits)"
+			},
+			{
+				"title": "Stockholm Science & Innovation School",
+				"when": "Aug 2022 – Jun 2025",
+				"meta": "Including Mathematics 5, Physics 2, Programming 1, Web Development 1, Computer and Network Technology, English 7.",
+				"text": "Technology Programme, Information and Media Technology"
+			}
+		],
+		"skills": [
+			[
+				"Languages",
+				"Python, JavaScript / Node.js, C, Rust, Java, C#, PHP, Lua, SQL, Bash, PowerShell"
+			],
+			[
+				"Web",
+				"Next.js, React, HTML/CSS, REST and server-sent events, WebGL"
+			],
+			[
+				"Systems",
+				"Linux (Arch, Debian), systemd, Windows 11 as a server, networking, VPN, DNS, Secure Boot, Git, GitHub Actions"
+			],
+			[
+				"Media",
+				"FFmpeg, video encoding (H.264, HEVC, AV1), PipeWire audio"
+			],
+			[
+				"Spoken",
+				"Swedish (native), English (fluent)"
+			]
+		]
+	},
+	"sv": {
+		"doc": "CV",
+		"role": "IKT-student på KTH · bygger och driver egenhostad mjukvara",
+		"summary": "Läser andra året på **Informations- och kommunikationsteknik** på KTH och lär mig bäst genom att bygga. Jag designar, levererar och driver min egen mjukvara hela vägen: en **mediaserver som vänner och familj använder varje dag**, **Linux- och Vulkan-verktyg** på låg nivå för spel, och verktygen bakom ett hemnätverk med tre datorer. Hemma i allt från C och Rust till Node.js-webbappar och drift av Windows-servrar.",
+		"sections": {
+			"experience": "Erfarenhet",
+			"projects": "Utvalda projekt",
+			"education": "Utbildning",
+			"skills": "Kompetenser"
+		},
+		"experience": [
+			{
+				"title": "Privatlärare",
+				"org": "Allakando",
+				"when": "apr 2025 – jul 2025",
+				"points": [
+					"Gav gymnasieelever enskild läxhjälp, på plats och online, i de ämnen de hade svårast med, med personliga studieplaner, läxor och mycket motivation."
+				]
+			},
+			{
+				"title": "Intervjuare",
+				"org": "Stockholms stad",
+				"when": "jul 2024",
+				"points": [
+					"Intervjuade privatpersoner och företag i innerstaden om deras ekonomi i en treveckors undersökning i team; underlaget gick till stadens beslut om förbättringar."
+				]
+			}
+		],
+		"projects": [
+			{
+				"title": "Marquee",
+				"url": "https://tjabo.dev/sv/projects/marquee",
+				"when": "2026 – nu",
+				"wide": true,
+				"text": "Egenhostad mediaserver byggd för mobilen först, som jag driver dygnet runt för vänner och familj: nedladdning med ett tryck, Watch Together-rum, casting till tv (DLNA/AirPlay), automatisk MP4-konvertering, automatisk undertextsynk och bildrutexakt klippredigering. Härdad efter en säkerhetsgranskning (inloggning, CSRF, tjänst med minsta behörighet); publik release v1.1.",
+				"stack": "Node.js 22 (inga beroenden) · FFmpeg · SSE · qBittorrent-API · TMDB · Windows-tjänst"
+			},
+			{
+				"title": "ember-latency",
+				"url": "https://tjabo.dev/sv/projects/ember-latency",
+				"when": "2026",
+				"text": "Vulkan-lager som mäter verklig klick-till-pixel-latens i alla spel, från musklick till bild på skärmen, live i MangoHud utan mätbar FPS-kostnad.",
+				"stack": "C · Vulkan · VK_EXT_present_timing · Linux evdev"
+			},
+			{
+				"title": "Archfleet",
+				"url": "https://tjabo.dev/sv/projects/archfleet",
+				"when": "2026",
+				"text": "Terminalpanel för alla datorer hemma över vanlig SSH: status, wake-on-LAN, processer, filer och en gemensam urklippshistorik för Linux och Windows.",
+				"stack": "Python · Textual · SSH · PowerShell"
+			},
+			{
+				"title": "Clipper",
+				"url": "https://tjabo.dev/sv/projects/clipper",
+				"when": "2026",
+				"text": "Lätt ersättare för Medal/ShadowPlay: alltid-på replay-buffert, granskningskö, trimmer, och klippen sparas på min egen server i stället för i ett moln.",
+				"stack": "Python · gpu-screen-recorder · OBS · FFmpeg"
+			},
+			{
+				"title": "agent-mesh",
+				"url": "https://tjabo.dev/sv/projects/agent-mesh",
+				"when": "2026",
+				"text": "Ger AI-kodagenter (Claude Code, Codex) samma instruktioner, minne och inställningar på tre datorer, synkat genom ett git-repo över SSH.",
+				"stack": "Python · Git · SSH · systemd"
+			}
+		],
+		"education": [
+			{
+				"title": "KTH Kungliga Tekniska högskolan",
+				"when": "aug 2025 – jun 2028",
+				"text": "Kandidatprogram, Informations- och kommunikationsteknik (180 hp)"
+			},
+			{
+				"title": "Stockholm Science & Innovation School",
+				"when": "aug 2022 – jun 2025",
+				"meta": "Bland annat Matematik 5, Fysik 2, Programmering 1, Webbutveckling 1, Dator- och nätverksteknik, Engelska 7.",
+				"text": "Teknikprogrammet, Informations- och medieteknik"
+			}
+		],
+		"skills": [
+			[
+				"Språk",
+				"Python, JavaScript / Node.js, C, Rust, Java, C#, PHP, Lua, SQL, Bash, PowerShell"
+			],
+			[
+				"Webb",
+				"Next.js, React, HTML/CSS, REST och server-sent events, WebGL"
+			],
+			[
+				"System",
+				"Linux (Arch, Debian), systemd, Windows 11 som server, nätverk, VPN, DNS, Secure Boot, Git, GitHub Actions"
+			],
+			[
+				"Media",
+				"FFmpeg, videokodning (H.264, HEVC, AV1), PipeWire-ljud"
+			],
+			[
+				"Talat",
+				"Svenska (modersmål), engelska (flytande)"
+			]
+		]
+	}
+}
