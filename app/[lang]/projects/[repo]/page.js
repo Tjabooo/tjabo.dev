@@ -67,6 +67,9 @@ export default async function ProjectPage({ params }) {
 	const style = { "--accent": repo.accent || "#ff8c1a" };
 	// Without a token (REST fallback) CI status is unknown, not "none".
 	const ciLabel = data.mode === "graphql" ? p.ci[repo.ci ?? "null"] : "—";
+	const num = (n) => n.toLocaleString(lang === "sv" ? "sv-SE" : "en-US");
+	const loc = repo.loc?.lines ? repo.loc : null;
+	const locTitle = loc ? [p.locDetail(num(loc.lines), num(loc.files)), ...loc.languages.slice(0, 4).map((l) => `${l.name} ${num(l.lines)}`)].join("\n") : undefined;
 
 	return (
 		<main id="main" className="page" style={style}>
@@ -108,6 +111,7 @@ export default async function ProjectPage({ params }) {
 					<dl className="proj-stats">
 						<div><dt>{p.stars}</dt><dd><Icon name="star" size={14} />{repo.stars}</dd></div>
 						<div><dt>{p.forks}</dt><dd><Icon name="fork" size={14} />{repo.forks}</dd></div>
+						<div title={locTitle}><dt>{p.loc}</dt><dd><Icon name="file" size={14} />{loc ? num(loc.lines) : "—"}</dd></div>
 						<div><dt>{p.languages}</dt><dd>{repo.language ? <><i className="dot" style={{ "--c": repo.language.color }} />{repo.language.name}</> : "—"}</dd></div>
 						<div><dt>{p.license}</dt><dd>{repo.license || "—"}</dd></div>
 						<div><dt>{p.updated}</dt><dd><TimeAgo date={repo.pushedAt} lang={lang} /></dd></div>

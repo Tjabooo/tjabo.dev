@@ -39,10 +39,11 @@ GitHub GraphQL ──► lib/github.js ──► memory ──► .cache/github.
 
 1. **On the server only.** `lib/github.js` asks the GraphQL API for the owner's repositories with `privacy: PUBLIC, isFork: false`, then filters again by each repo's own `isPrivate` / `isFork` flags (a repo with unknown flags is dropped) and the `hidden` list. Nothing is fetched from the browser, and private repo names or counts never reach a page.
 2. **Per repo:** description, topics, primary and all languages, stars, forks, last push, latest releases, CI status of the default branch (`statusCheckRollup`), homepage, license, recent commits and the README, all in one query.
-3. **The heatmap** comes from GitHub's public contributions page, so it shows exactly what anyone sees on the profile, never private work.
-4. **Caching:** results live in memory and in `CACHE_DIR/github.json` for 30 minutes (`GITHUB_CACHE_TTL_MINUTES`). If GitHub is down, rate-limited or the token is bad, pages keep the last good data from disk; a failure backs off for two minutes instead of retrying on every request.
-5. **Freshness:** pages are regenerated at most hourly (ISR), and a GitHub webhook makes it instant: a push, release or repo change refetches and drops every cached page within seconds. A new public repo appears on the next hourly refresh even without a webhook.
-6. **No token?** It still works through the unauthenticated REST API, minus CI status, release lists and the per-language split.
+3. **Lines of code** (`lib/loc.js`): GitHub has no API for it, so each repo's tarball is streamed from codeload.github.com (public, no token, outside the API rate limit) through gunzip and a small tar reader, counting non-blank lines in source files. Docs, data/config files (Markdown, JSON, YAML, TOML), lockfiles, minified bundles, vendored or build folders and binaries are skipped; extensionless scripts count when their shebang names a known language. Counts are cached per commit in `CACHE_DIR/loc.json`, so a sync only downloads repos that changed, waits at most 25 s and lets slower counts finish in the background. Hovering the stat shows the file count and top languages.
+4. **The heatmap** comes from GitHub's public contributions page, so it shows exactly what anyone sees on the profile, never private work.
+5. **Caching:** results live in memory and in `CACHE_DIR/github.json` for 30 minutes (`GITHUB_CACHE_TTL_MINUTES`). If GitHub is down, rate-limited or the token is bad, pages keep the last good data from disk; a failure backs off for two minutes instead of retrying on every request.
+6. **Freshness:** pages are regenerated at most hourly (ISR), and a GitHub webhook makes it instant: a push, release or repo change refetches and drops every cached page within seconds. A new public repo appears on the next hourly refresh even without a webhook.
+7. **No token?** It still works through the unauthenticated REST API, minus CI status, release lists and the per-language split.
 
 ### Webhook
 
@@ -80,6 +81,7 @@ Anything not listed here still appears, using what the API says.
 | `GITHUB_WEBHOOK_SECRET` | Shared secret for `/api/github` |
 | `GITHUB_OWNER`, `SITE_URL` | Override `owner` / `siteUrl` from the config |
 | `CACHE_DIR`, `GITHUB_CACHE_TTL_MINUTES` | Where and how long GitHub data is cached |
+| `LOC_COUNT` | `0` turns the lines-of-code count off (no tarball downloads) |
 
 Add `?perf` to the URL to log the shader's frame time to the console.
 
