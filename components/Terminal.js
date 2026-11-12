@@ -54,7 +54,7 @@ export default function Terminal({ lang, items, totals, contact, onClose }) {
 		},
 		cat: (args) => {
 			const r = find(args[0]);
-			if (!args[0]) return [[span("c-r", "cat: which repo? try: cat marquee")]];
+			if (!args[0]) return [[span("c-r", "cat: which repo? try: cat lilin")]];
 			if (!r) return [[span("c-r", `cat: ${args[0]}: no such repo`)]];
 			return [
 				[span("c-o", `# ${r.name}`)],

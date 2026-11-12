@@ -4,7 +4,7 @@ import { test } from "node:test";
 import { verifySignature } from "../lib/webhook.js";
 
 const secret = "s3cret";
-const body = JSON.stringify({ ref: "refs/heads/main", repository: { name: "marquee" } });
+const body = JSON.stringify({ ref: "refs/heads/main", repository: { name: "lilin" } });
 const sign = (b, s = secret) => `sha256=${createHmac("sha256", s).update(b).digest("hex")}`;
 
 test("accepts GitHub's HMAC-SHA256 signature", () => {

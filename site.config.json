@@ -12,7 +12,7 @@
 		"discord": "isidorjp"
 	},
 	"featured": [
-		"marquee",
+		"lilin",
 		"archfleet",
 		"clipper",
 		"ember-latency",
@@ -29,7 +29,7 @@
 		"fetch-crosshair"
 	],
 	"overrides": {
-		"marquee": {
+		"lilin": {
 			"tagline": "A self-hosted, phone-first media server for friends and family.",
 			"tagline_sv": "En egenhostad mediaserver för vänner och familj, byggd för mobilen först.",
 			"description_sv": "Egenhostad mediaapp byggd för mobilen först, med TMDB-sök, qBittorrent-förlopp, casting via DLNA/AirPlay och automatisk konvertering till MP4.",

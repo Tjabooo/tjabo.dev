@@ -20,14 +20,14 @@ const node = (name, extra = {}) => ({
 
 test("private repos, forks and hidden repos are dropped", () => {
 	const repos = [
-		fromGraphQL(node("marquee"), "Tjabooo"),
+		fromGraphQL(node("lilin"), "Tjabooo"),
 		fromGraphQL(node("secret-thing", { isPrivate: true }), "Tjabooo"),
 		fromGraphQL(node("someone-elses", { isFork: true }), "Tjabooo"),
 		fromGraphQL(node("fitcheck-uf-app"), "Tjabooo"), // hidden in site.config.json
 		fromGraphQL(node("no-flags", { isPrivate: undefined, isFork: undefined }), "Tjabooo"), // unknown = not shown
 	];
 	const data = buildPortfolio({ repos, mode: "graphql", fetchedAt: "now" });
-	assert.deepEqual(data.repos.map((r) => r.name), ["marquee"]);
+	assert.deepEqual(data.repos.map((r) => r.name), ["lilin"]);
 	assert.equal(data.totals.repos, 1);
 	const json = JSON.stringify(data);
 	for (const name of ["secret-thing", "someone-elses", "fitcheck-uf-app", "no-flags"]) assert.ok(!json.includes(name), `${name} leaked`);
@@ -69,14 +69,14 @@ test("a GitHub outage serves the disk cache instead of breaking the page", async
 	const dir = await mkdtemp(path.join(tmpdir(), "tjabo-cache-"));
 	process.env.CACHE_DIR = dir;
 	delete process.env.GITHUB_TOKEN;
-	const stale = { mode: "graphql", fetchedAt: "2020-01-01T00:00:00Z", repos: [{ name: "marquee" }], totals: { repos: 1, stars: 0, languages: [] }, calendar: null, activity: [] };
+	const stale = { mode: "graphql", fetchedAt: "2020-01-01T00:00:00Z", repos: [{ name: "lilin" }], totals: { repos: 1, stars: 0, languages: [] }, calendar: null, activity: [] };
 	await writeFile(path.join(dir, "github.json"), JSON.stringify(stale));
 	const realFetch = globalThis.fetch;
 	globalThis.fetch = async () => { throw new Error("network down"); };
 	try {
 		const { getPortfolio, syncStatus } = await import("../lib/github.js");
 		const data = await getPortfolio();
-		assert.equal(data.repos[0].name, "marquee");
+		assert.equal(data.repos[0].name, "lilin");
 		assert.ok(syncStatus().lastError, "the failure is recorded");
 	} finally {
 		globalThis.fetch = realFetch;

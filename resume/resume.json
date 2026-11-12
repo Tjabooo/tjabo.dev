@@ -63,8 +63,8 @@
 		],
 		"projects": [
 			{
-				"title": "Marquee",
-				"url": "https://tjabo.dev/projects/marquee",
+				"title": "Lilin",
+				"url": "https://tjabo.dev/projects/lilin",
 				"when": "2026 – now",
 				"wide": true,
 				"text": "Self-hosted, phone-first media server that I run around the clock for friends and family: one-press downloads, Watch Together rooms, casting to TVs (DLNA/AirPlay), automatic MP4 conversion, subtitle auto-sync and frame-exact clip editing. Hardened after a security audit (sign-in, CSRF, least-privilege service); public release v1.1.",
@@ -175,8 +175,8 @@
 		],
 		"projects": [
 			{
-				"title": "Marquee",
-				"url": "https://tjabo.dev/sv/projects/marquee",
+				"title": "Lilin",
+				"url": "https://tjabo.dev/sv/projects/lilin",
 				"when": "2026 – nu",
 				"wide": true,
 				"text": "Egenhostad mediaserver byggd för mobilen först, som jag driver dygnet runt för vänner och familj: nedladdning med ett tryck, Watch Together-rum, casting till tv (DLNA/AirPlay), automatisk MP4-konvertering, automatisk undertextsynk och bildrutexakt klippredigering. Härdad efter en säkerhetsgranskning (inloggning, CSRF, tjänst med minsta behörighet); publik release v1.1.",
