@@ -28,3 +28,6 @@ npm-debug.log*
 
 # résumé build output (PDFs go to public/)
 /resume/out/
+
+# résumé contact details for private builds (phone/email): never commit
+/resume/private.json

@@ -3,6 +3,8 @@
 //
 //   node scripts/resume.js          write resume/out/{en,sv}.html, then print the PDFs if Chrome/Edge is found
 //   node scripts/resume.js --html   only write the HTML (print it elsewhere)
+//   node scripts/resume.js --variant ops       use the "ops" variant (drift/DevOps wording and project pick)
+//   node scripts/resume.js --private --out DIR add phone/email from resume/private.json (git-ignored), write PDFs to DIR
 //
 // Content lives in resume/resume.json (one shared block + one block per language).
 // Fonts are embedded, so the HTML prints the same on any machine. Set CHROME=/path/to/chrome to pick the browser.
@@ -13,6 +15,17 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const data = JSON.parse(readFileSync(join(root, "resume/resume.json"), "utf8"));
+const arg = (name) => { const i = process.argv.indexOf(name); return i > 0 ? process.argv[i + 1] : undefined; };
+const variant = arg("--variant");
+const priv = process.argv.includes("--private");
+const pdfDir = resolve(arg("--out") ?? join(root, "public"));
+if (priv && !arg("--out")) {
+	console.error("--private needs --out DIR: private PDFs must never land in public/.");
+	process.exit(1);
+}
+// private.json: { contact: [...] } replaces the public contact list. An entry may be an array of
+// items that share one line (keeps the header as short as the public one).
+const privateContact = priv ? JSON.parse(readFileSync(join(root, "resume/private.json"), "utf8")).contact : null;
 const out = join(root, "resume/out");
 mkdirSync(out, { recursive: true });
 
@@ -100,12 +113,26 @@ const entry = (e, extra = "") => `
 	${e.stack ? `<div class="stack">${esc(e.stack)}</div>` : ""}
 </div>`;
 
+// A variant overrides any language field; "pick" chooses and orders projects by title.
+function content(lang) {
+	const base = data[lang];
+	const v = variant ? base.variants?.[variant] : {};
+	if (!v) throw new Error(`no variant "${variant}" for ${lang}`);
+	const d = { ...base, ...v };
+	const pick = d.pick ?? base.projects.map((p) => p.title);
+	d.projects = pick.map((t) => base.projects.find((p) => p.title === t) ?? (() => { throw new Error(`unknown project ${t}`); })());
+	return d;
+}
+
 function html(lang) {
-	const c = data.common, d = data[lang];
+	const c = data.common, d = content(lang);
 	const [first, ...rest] = c.name.split(" ");
-	const contact = c.contact.map((x) => x.url
-		? `<a href="${esc(x.url)}">${esc(x.label)}</a>`
-		: `<span>${esc(typeof x.label === "object" ? x.label[lang] : x.label)}</span>`).join("<br>");
+	const item = (x) => {
+		const label = typeof x.label === "object" ? x.label[lang] : x.label;
+		return x.url ? `<a href="${esc(x.url)}">${esc(label)}</a>` : `<span>${esc(label)}</span>`;
+	};
+	const contact = (privateContact ?? c.contact)
+		.map((x) => Array.isArray(x) ? x.map(item).join(" · ") : item(x)).join("<br>");
 	const s = d.sections;
 	return `<!doctype html>
 <html lang="${lang}"><head><meta charset="utf-8">
@@ -137,8 +164,9 @@ function findChrome() {
 }
 
 const langs = Object.keys(data).filter((k) => k !== "common" && !k.startsWith("$"));
-for (const lang of langs) writeFileSync(join(out, `${lang}.html`), html(lang));
-console.log(`html: ${langs.map((l) => `resume/out/${l}.html`).join(", ")}`);
+const tag = (lang) => `${lang}${variant ? `-${variant}` : ""}${priv ? "-private" : ""}`;
+for (const lang of langs) writeFileSync(join(out, `${tag(lang)}.html`), html(lang));
+console.log(`html: ${langs.map((l) => `resume/out/${tag(l)}.html`).join(", ")}`);
 
 if (!process.argv.includes("--html")) {
 	const chrome = findChrome();
@@ -146,10 +174,12 @@ if (!process.argv.includes("--html")) {
 		console.error("No Chrome/Edge found: set CHROME=/path/to/chrome, or print resume/out/*.html elsewhere.");
 		process.exit(1);
 	}
+	mkdirSync(pdfDir, { recursive: true });
 	for (const lang of langs) {
-		const pdf = join(root, "public", `${lang}-resume.pdf`);
+		const pdf = join(pdfDir, priv ? `Oliver-Westin-${data[lang].doc.replace(/é/g, "e")}${variant ? `-${variant}` : ""}-${lang}.pdf`
+			: `${lang}${variant ? `-${variant}` : ""}-resume.pdf`);
 		execFileSync(chrome, ["--headless=new", "--disable-gpu", "--no-pdf-header-footer", "--no-first-run",
-			`--print-to-pdf=${pdf}`, pathToFileURL(join(out, `${lang}.html`)).href], { stdio: "ignore" });
-		console.log(`pdf:  public/${lang}-resume.pdf`);
+			`--print-to-pdf=${pdf}`, pathToFileURL(join(out, `${tag(lang)}.html`)).href], { stdio: "ignore" });
+		console.log(`pdf:  ${pdf}`);
 	}
 }
