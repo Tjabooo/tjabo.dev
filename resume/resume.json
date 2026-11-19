@@ -37,11 +37,11 @@
 			{
 				"title": "Machine Operator",
 				"org": "Apotekstjänst",
-				"when": "Jun 2026 – now",
-				"meta": "Lidingö · pharmaceutical production, started over the summer (Jun – Jul 2026)",
+				"when": "Jun 2026 – Sep 2026",
+				"meta": "Lidingö · pharmaceutical production (dose packaging)",
 				"points": [
-					"Run **VMI INDIVION** machines that pack patients' medicines into daily-dose pouches at high volume.",
-					"Change medication canisters, monitor runs and clear machine stops under strict quality and hygiene routines."
+					"Ran **VMI INDIVION** machines that pack patients' medicines into daily-dose pouches at high volume.",
+					"Changed medication canisters, monitored runs and cleared machine stops under strict quality and hygiene routines."
 				]
 			},
 			{
@@ -151,7 +151,7 @@
 		"variants": {
 			"ops": {
 				"role": "Junior DevOps / Linux operations · Stockholm",
-				"summary": "I run my own services in production: a **media server that friends and family use every day**, on a Windows server and two Linux machines I administer myself: monitoring, security, VPN, DNS, CI and troubleshooting. I write the tooling in **Rust, Python, Bash and PowerShell** and use **AI coding agents daily**, directing, reviewing and testing their work. Studied ICT at KTH; now in pharmaceutical production under strict quality routines.",
+				"summary": "I run my own services in production: a **media server that friends and family use every day**, on a Windows server and two Linux machines I administer myself: monitoring, security, VPN, DNS, CI and troubleshooting. I write the tooling in **Rust, Python, Bash and PowerShell** and use **AI coding agents daily**, directing, reviewing and testing their work. Studied ICT at KTH; most recently worked in pharmaceutical production under strict quality routines.",
 				"pick": [
 					"Lilin",
 					"Archfleet",
@@ -198,11 +198,11 @@
 			{
 				"title": "Maskinoperatör",
 				"org": "Apotekstjänst",
-				"when": "jun 2026 – nu",
-				"meta": "Lidingö · läkemedelsproduktion, började under sommaren (jun – jul 2026)",
+				"when": "jun 2026 – sep 2026",
+				"meta": "Lidingö · läkemedelsproduktion (dosförpackning)",
 				"points": [
-					"Kör **VMI INDIVION**-maskiner som packar patienters läkemedel i dospåsar (storskalig läkemedelsproduktion).",
-					"Byter läkemedelskassetter, övervakar körningar och åtgärdar stopp enligt strikta kvalitets- och hygienrutiner."
+					"Körde **VMI INDIVION**-maskiner som packar patienters läkemedel i dospåsar (storskalig läkemedelsproduktion).",
+					"Bytte läkemedelskassetter, övervakade körningar och åtgärdade stopp enligt strikta kvalitets- och hygienrutiner."
 				]
 			},
 			{
@@ -312,7 +312,7 @@
 		"variants": {
 			"ops": {
 				"role": "Junior DevOps / Linux-drift · Stockholm",
-				"summary": "Jag driver egna tjänster i produktion: en **mediaserver som vänner och familj använder varje dag**, på en Windows-server och två Linux-maskiner som jag sköter själv: övervakning, säkerhet, VPN, DNS, CI och felsökning. Verktygen skriver jag i **Rust, Python, Bash och PowerShell**, och jag arbetar **dagligen med AI-kodagenter** som jag styr, granskar och testar. Har läst IKT på KTH; arbetar nu i läkemedelsproduktion under strikta kvalitetsrutiner.",
+				"summary": "Jag driver egna tjänster i produktion: en **mediaserver som vänner och familj använder varje dag**, på en Windows-server och två Linux-maskiner som jag sköter själv: övervakning, säkerhet, VPN, DNS, CI och felsökning. Verktygen skriver jag i **Rust, Python, Bash och PowerShell**, och jag arbetar **dagligen med AI-kodagenter** som jag styr, granskar och testar. Har läst IKT på KTH och arbetade senast i läkemedelsproduktion under strikta kvalitetsrutiner.",
 				"pick": [
 					"Lilin",
 					"Archfleet",
