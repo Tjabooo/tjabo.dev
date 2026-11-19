@@ -104,6 +104,13 @@
 				"when": "2026",
 				"text": "eBPF tracer that names the layer behind a lag spike: CPU scheduler, the app, kernel, VPN tunnel, Wi-Fi, internet or server.",
 				"stack": "Rust · eBPF (libbpf-rs, CO-RE) · Linux"
+			},
+			{
+				"title": "wifiwalk",
+				"url": "https://github.com/Tjabooo/wifiwalk",
+				"when": "2026",
+				"text": "Measures Wi-Fi signal room by room in real time. Moving to a 1 W channel at 80 MHz lifted the weakest room from -80 to -68 dBm.",
+				"stack": "Python · iw · router API"
 			}
 		],
 		"education": [
@@ -175,6 +182,39 @@
 					[
 						"Media",
 						"FFmpeg, HLS streaming, video encoding (H.264, HEVC, AV1)"
+					],
+					[
+						"Spoken",
+						"Swedish (native), English (fluent)"
+					]
+				]
+			},
+			"klient": {
+				"role": "Junior IT specialist · clients, hardware and support · Stockholm",
+				"summary": "Family and friends come to me **several times a week** when their tech acts up. I have **built five PCs**, installed Windows dozens of times and troubleshoot down to the faulty component. At home I run three machines on **Windows and Linux**, my own DNS server and a media server for friends and family. Studied ICT at KTH; most recently worked in pharmaceutical production with strict traceability.",
+				"pick": [
+					"Lilin",
+					"Archfleet",
+					"wifiwalk",
+					"playhead",
+					"lagblame"
+				],
+				"skills": [
+					[
+						"Windows",
+						"Daily user for years: installs (bare metal and VMs), settings, troubleshooting, PowerShell, dual boot"
+					],
+					[
+						"Hardware",
+						"Built 5 PCs, platform swaps (LGA 1700 → AM5), component diagnosis down to the PSU, M.2, cooling"
+					],
+					[
+						"Network",
+						"Wi-Fi channels and power limits, DNS (AdGuard Home), SSH, VPN, TCP/IP"
+					],
+					[
+						"Security",
+						"Secure Boot with own keys (sbctl), key-only SSH, least-privilege services, VPN kill switch"
 					],
 					[
 						"Spoken",
@@ -265,6 +305,13 @@
 				"when": "2026",
 				"text": "eBPF-verktyg som pekar ut lagret bakom en laggspik: CPU-schemaläggaren, appen, kärnan, VPN-tunneln, wifi, internet eller servern.",
 				"stack": "Rust · eBPF (libbpf-rs, CO-RE) · Linux"
+			},
+			{
+				"title": "wifiwalk",
+				"url": "https://github.com/Tjabooo/wifiwalk",
+				"when": "2026",
+				"text": "Mäter wifi-signalen rum för rum i realtid. Byte till en kanal med 1 W och 80 MHz lyfte sämsta rummet från -80 till -68 dBm.",
+				"stack": "Python · iw · router-API"
 			}
 		],
 		"education": [
@@ -336,6 +383,39 @@
 					[
 						"Media",
 						"FFmpeg, HLS-strömning, videokodning (H.264, HEVC, AV1)"
+					],
+					[
+						"Talat",
+						"Svenska (modersmål), engelska (flytande)"
+					]
+				]
+			},
+			"klient": {
+				"role": "Junior IT-specialist · klienter, hårdvara och support · Stockholm",
+				"summary": "Familj och vänner kommer till mig **flera gånger i veckan** när tekniken krånglar. Jag har **byggt fem datorer**, installerat Windows dussintals gånger och felsöker ner till den trasiga komponenten. Hemma driver jag tre datorer med **Windows och Linux**, en egen DNS-server och en mediaserver för vänner och familj. Har läst IKT på KTH; arbetade senast i läkemedelsproduktion med strikt spårbarhet.",
+				"pick": [
+					"Lilin",
+					"Archfleet",
+					"wifiwalk",
+					"playhead",
+					"lagblame"
+				],
+				"skills": [
+					[
+						"Windows",
+						"Daglig användare i många år: installation (hårdvara och VM), inställningar, felsökning, PowerShell, dual boot"
+					],
+					[
+						"Hårdvara",
+						"Byggt 5 datorer, plattformsbyten (LGA 1700 → AM5), komponentfelsökning ner till nätaggregatet, M.2, kylning"
+					],
+					[
+						"Nätverk",
+						"Wifi-kanaler och effektgränser, DNS (AdGuard Home), SSH, VPN, TCP/IP"
+					],
+					[
+						"Säkerhet",
+						"Secure Boot med egna nycklar (sbctl), SSH med nycklar, tjänster med minsta behörighet, VPN med kill switch"
 					],
 					[
 						"Talat",
