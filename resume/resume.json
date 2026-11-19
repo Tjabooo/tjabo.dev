@@ -38,10 +38,10 @@
 				"title": "Machine Operator",
 				"org": "Apotekstjänst",
 				"when": "Jun 2026 – Sep 2026",
-				"meta": "Lidingö · pharmaceutical production (dose packaging)",
+				"meta": "Lidingö · pharmaceutical production, ran VMI INDIVION dose-packaging machines",
 				"points": [
-					"Ran **VMI INDIVION** machines that pack patients' medicines into daily-dose pouches at high volume.",
-					"Changed medication canisters, monitored runs and cleared machine stops under strict quality and hygiene routines."
+					"Set the **company record of 7,036 pouches/hour** over a shift by pre-loading the day's canisters; now standard.",
+					"Handled re-runs after machine software faults with marking and paperwork, keeping every pouch traceable."
 				]
 			},
 			{
@@ -162,7 +162,7 @@
 				"skills": [
 					[
 						"Ops",
-						"Linux (Arch, Debian), systemd, Windows 11 as a server, PowerShell, SSH, VPN tunnels, DNS, Cloudflare, eBPF"
+						"Linux (Arch, Debian), systemd, Windows 11 as a server, SSH, VPN, DNS (AdGuard Home), TCP/IP, eBPF"
 					],
 					[
 						"Scripting",
@@ -199,10 +199,10 @@
 				"title": "Maskinoperatör",
 				"org": "Apotekstjänst",
 				"when": "jun 2026 – sep 2026",
-				"meta": "Lidingö · läkemedelsproduktion (dosförpackning)",
+				"meta": "Lidingö · läkemedelsproduktion, körde VMI INDIVION-dosmaskiner",
 				"points": [
-					"Körde **VMI INDIVION**-maskiner som packar patienters läkemedel i dospåsar (storskalig läkemedelsproduktion).",
-					"Bytte läkemedelskassetter, övervakade körningar och åtgärdade stopp enligt strikta kvalitets- och hygienrutiner."
+					"Slog **företagets rekord på 7 036 påsar/timme** under ett pass genom att ladda dagens kassetter i förväg.",
+					"Hanterade omkörningar efter mjukvarufel med märkning och dokumentation så att varje påse gick att spåra."
 				]
 			},
 			{
@@ -323,7 +323,7 @@
 				"skills": [
 					[
 						"Drift",
-						"Linux (Arch, Debian), systemd, Windows 11 som server, PowerShell, SSH, VPN-tunnlar, DNS, Cloudflare, eBPF"
+						"Linux (Arch, Debian), systemd, Windows 11 som server, SSH, VPN, DNS (AdGuard Home), TCP/IP, eBPF"
 					],
 					[
 						"Script",
