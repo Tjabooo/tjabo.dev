@@ -173,6 +173,8 @@ Set-Live $dir
 Start-Site
 if (Wait-Healthy $buildId) {
     Say "live: $name on port $Port" Green
+    # Ping search engines (IndexNow) about the sitemap; never fails the deploy.
+    try { & node (Join-Path $dir 'scripts\indexnow.js') 2>&1 | ForEach-Object { Say $_ } } catch { Say "indexnow skipped: $_" Yellow }
 } else {
     Say 'new build did not come up healthy, rolling back' Red
     Stop-Site

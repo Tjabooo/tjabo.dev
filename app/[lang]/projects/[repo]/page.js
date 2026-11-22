@@ -11,6 +11,7 @@ import { config, LANGS, SITE_URL, localePath } from "@/lib/config";
 import { getPortfolio, getRepo } from "@/lib/github";
 import { dict, formatDate } from "@/lib/i18n";
 import { findInstall, readmeSummary, renderReadme } from "@/lib/readme";
+import { platforms, projectDescription, projectTitle, topicWords } from "@/lib/seo";
 import { cardData, localized, neighbours, relatedRepos } from "@/lib/view";
 
 export const revalidate = 3600;
@@ -25,18 +26,19 @@ export async function generateMetadata({ params }) {
 	const { lang, repo: name } = await params;
 	const repo = await getRepo(decodeURIComponent(name));
 	if (!repo) return { title: "404" };
-	const { description, tagline } = localized(repo, lang);
 	const path = `/projects/${encodeURIComponent(repo.name)}`;
-	const desc = tagline ? `${tagline} ${description}` : description || readmeSummary(repo.readme);
+	const title = projectTitle(repo, lang);
+	const desc = projectDescription(repo, lang, readmeSummary(repo.readme));
 	return {
-		title: repo.name,
+		title,
 		description: desc,
+		keywords: topicWords(repo),
 		alternates: {
 			canonical: localePath(lang, path),
 			languages: { en: path, sv: `/sv${path}`, "x-default": path },
 		},
-		openGraph: { type: "article", title: `${repo.name} · tjabo`, description: desc, url: localePath(lang, path) },
-		twitter: { card: "summary_large_image", title: `${repo.name} · tjabo`, description: desc },
+		openGraph: { type: "article", title, description: desc, url: localePath(lang, path) },
+		twitter: { card: "summary_large_image", title, description: desc },
 	};
 }
 
@@ -65,6 +67,7 @@ export default async function ProjectPage({ params }) {
 	const { prev, next } = neighbours(repo, data.repos);
 	const base = lang === "sv" ? "/sv" : "";
 	const style = { "--accent": repo.accent || "#ff8c1a" };
+	const pageUrl = `${SITE_URL}${localePath(lang, `/projects/${encodeURIComponent(repo.name)}`)}`;
 	// Without a token (REST fallback) CI status is unknown, not "none".
 	const ciLabel = data.mode === "graphql" ? p.ci[repo.ci ?? "null"] : "—";
 	const num = (n) => n.toLocaleString(lang === "sv" ? "sv-SE" : "en-US");
@@ -73,21 +76,39 @@ export default async function ProjectPage({ params }) {
 
 	return (
 		<main id="main" className="page" style={style}>
-			<JsonLd data={{
-				"@context": "https://schema.org",
-				"@type": "SoftwareSourceCode",
-				name: repo.name,
-				description,
-				codeRepository: repo.url,
-				url: `${SITE_URL}${localePath(lang, `/projects/${encodeURIComponent(repo.name)}`)}`,
-				programmingLanguage: repo.languages.map((l) => l.name),
-				keywords: repo.topics.join(", ") || undefined,
-				license: repo.license ? `https://spdx.org/licenses/${repo.license}.html` : undefined,
-				dateModified: repo.pushedAt,
-				dateCreated: repo.createdAt,
-				version: repo.release?.tag,
-				author: { "@type": "Person", name: config.name, url: SITE_URL },
-			}} />
+			<JsonLd data={[
+				{
+					"@context": "https://schema.org",
+					"@type": ["SoftwareSourceCode", "SoftwareApplication"],
+					name: repo.name,
+					headline: projectTitle(repo, lang),
+					description,
+					codeRepository: repo.url,
+					url: pageUrl,
+					sameAs: [repo.url, repo.homepage && !repo.homepage.startsWith(SITE_URL) ? repo.homepage : null].filter(Boolean),
+					programmingLanguage: repo.languages.map((l) => l.name),
+					keywords: topicWords(repo).join(", ") || undefined,
+					operatingSystem: platforms(repo).join(", ") || undefined,
+					applicationCategory: "DeveloperApplication",
+					isAccessibleForFree: true,
+					license: repo.license ? `https://spdx.org/licenses/${repo.license}.html` : undefined,
+					dateModified: repo.pushedAt,
+					dateCreated: repo.createdAt,
+					version: repo.release?.tag,
+					softwareVersion: repo.release?.tag,
+					downloadUrl: repo.release?.url,
+					inLanguage: lang,
+					author: { "@type": "Person", name: config.name, alternateName: config.handle, url: SITE_URL, sameAs: [config.contact.github].filter(Boolean) },
+				},
+				{
+					"@context": "https://schema.org",
+					"@type": "BreadcrumbList",
+					itemListElement: [
+						{ "@type": "ListItem", position: 1, name: "tjabo.dev", item: `${SITE_URL}${localePath(lang, "/")}` },
+						{ "@type": "ListItem", position: 2, name: repo.name, item: pageUrl },
+					],
+				},
+			]} />
 			<header className="proj-hero">
 				<div className="hexgrid" />
 				<div className="wrap">

@@ -33,7 +33,9 @@
 			"tagline": "A self-hosted, phone-first media server for friends and family.",
 			"tagline_sv": "En egenhostad mediaserver för vänner och familj, byggd för mobilen först.",
 			"description_sv": "Egenhostad mediaapp byggd för mobilen först, med TMDB-sök, qBittorrent-förlopp, casting via DLNA/AirPlay och automatisk konvertering till MP4.",
-			"accent": "#ff8c1a"
+			"accent": "#ff8c1a",
+			"seo_title": "Self-hosted media server, a Plex/Jellyfin alternative for phones",
+			"seo_title_sv": "Egenhostad mediaserver för mobilen, ett alternativ till Plex/Jellyfin"
 		},
 		"archfleet": {
 			"tagline": "Every machine at home in one terminal, over plain SSH.",
@@ -45,7 +47,8 @@
 			"tagline": "Medal/ShadowPlay, minus the bloat. Clips land on my own server.",
 			"tagline_sv": "Som Medal/ShadowPlay fast lätt. Klippen hamnar på min egen server.",
 			"description_sv": "Lätt ersättare för Medal/ShadowPlay på Linux (gpu-screen-recorder) och Windows (OBS): alltid-på replay-buffert, granskningskö, trimmer och klipp till din hemserver.",
-			"accent": "#e5484d"
+			"accent": "#e5484d",
+			"seo_title_sv": "Alternativ till Medal och ShadowPlay för Linux och Windows"
 		},
 		"ember-latency": {
 			"tagline": "Click-to-photon latency for any Vulkan game, live in MangoHud.",
@@ -54,10 +57,12 @@
 			"accent": "#ff4d1f"
 		},
 		"agent-mesh": {
-			"tagline": "One brain for Claude Code and Codex across all my machines.",
-			"tagline_sv": "En hjärna för Claude Code och Codex på alla mina datorer.",
-			"description_sv": "En hjärna för Claude Code och Codex på alla dina datorer: delad AGENTS.md, minne och inställningar genom ett git-repo du själv äger.",
-			"accent": "#f5a524"
+			"tagline": "One brain for Claude Code across all my machines.",
+			"tagline_sv": "En hjärna för Claude Code på alla mina datorer.",
+			"description_sv": "En hjärna för Claude Code på alla dina datorer: delad AGENTS.md / CLAUDE.md, minne och inställningar genom ett git-repo du själv äger.",
+			"accent": "#f5a524",
+			"seo_title": "Sync Claude Code memory and CLAUDE.md across machines",
+			"seo_title_sv": "Synka Claude Codes minne och CLAUDE.md mellan datorer"
 		},
 		"screentime": {
 			"tagline": "iPhone-style Screen Time for Hyprland.",
@@ -92,7 +97,11 @@
 			"tagline": "This site. Synced with GitHub on its own.",
 			"tagline_sv": "Den här sajten. Synkar med GitHub av sig själv.",
 			"description": "My portfolio: a WebGL ember hero, a command palette, a hidden terminal and a project grid that keeps itself in sync with GitHub.",
-			"description_sv": "Min portfolio: en WebGL-glödhero, en kommandopalett, en gömd terminal och ett projektgaller som håller sig synkat med GitHub."
+			"description_sv": "Min portfolio: en WebGL-glödhero, en kommandopalett, en gömd terminal och ett projektgaller som håller sig synkat med GitHub.",
+			"seo_title": "Next.js developer portfolio that syncs itself with GitHub"
+		},
+		"whenup": {
+			"seo_title": "Offline job queue: run commands when a machine boots"
 		}
 	}
 }
