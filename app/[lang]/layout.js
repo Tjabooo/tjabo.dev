@@ -40,6 +40,7 @@ export async function generateMetadata({ params }) {
 		openGraph: { type: "website", siteName: "tjabo.dev", locale: lang === "sv" ? "sv_SE" : "en_GB", url: localePath(lang, "/") },
 		twitter: { card: "summary_large_image" },
 		robots: { index: true, follow: true },
+		verification: { google: "bGAz-LmPdVKjLv0JYJtEY_NhwYlE6GUaRNXV3p0ny_0" }, // Search Console
 	};
 }
 
