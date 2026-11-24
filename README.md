@@ -4,6 +4,8 @@ My portfolio: a hand-written WebGL ember hero, a ⌘K command palette, a hidden 
 
 **Live:** [tjabo.dev](https://tjabo.dev) · English at `/`, Swedish at `/sv`
 
+![A tour: the ember hero, the hidden terminal from the ⌘K palette, the project grid and recent activity](docs/demo.gif)
+
 ![The hero: a thermal flow-field shader behind the name, HUD readouts below](docs/hero.png)
 
 <p>
