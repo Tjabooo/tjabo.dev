@@ -26,6 +26,7 @@ export default function Contact({ lang }) {
 									<Icon name="discord" /><span className="lbl">{t.discord}</span><span className="val">{c.discord}</span>
 								</CopyButton>
 							) : null}
+							{c.kofi ? <a className="link-row" href={c.kofi} target="_blank" rel="me noopener"><Icon name="coffee" /><span className="lbl">Ko-fi</span><span className="val">{handle(c.kofi)}</span></a> : null}
 							{c.email ? <a className="link-row" href={`mailto:${c.email}`}><Icon name="mail" /><span className="lbl">{t.email}</span><span className="val">{c.email}</span></a> : null}
 						</div>
 					</div>

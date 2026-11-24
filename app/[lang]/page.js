@@ -27,7 +27,7 @@ export default async function Home({ params }) {
 				image: `${SITE_URL}/apple-icon.png`,
 				homeLocation: { "@type": "Place", name: "Stockholm, Sweden" },
 				jobTitle: lang === "sv" ? "Utvecklare" : "Developer",
-				sameAs: [config.contact.github, config.contact.linkedin, config.contact.instagram].filter(Boolean),
+				sameAs: [config.contact.github, config.contact.linkedin, config.contact.instagram, config.contact.kofi].filter(Boolean),
 				knowsAbout: data.totals.languages.map((l) => l.name),
 			}} />
 			<Hero lang={lang} data={data} />

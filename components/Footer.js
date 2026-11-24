@@ -17,7 +17,7 @@ export default function Footer({ lang, fetchedAt }) {
 						<kbd>Ctrl</kbd> <kbd>K</kbd> {t.footer.palette} · <kbd>`</kbd> {t.footer.terminal}
 					</span>
 					<span>
-						<a href={config.contact.github} rel="me noopener" target="_blank">GitHub</a> · <a href="/feed.xml">RSS</a> · <a href={`https://github.com/${config.owner}/tjabo.dev`} target="_blank" rel="noopener">source</a>
+						<a href={config.contact.github} rel="me noopener" target="_blank">GitHub</a> · {config.contact.kofi ? <><a href={config.contact.kofi} rel="me noopener" target="_blank">Ko-fi</a> · </> : null}<a href="/feed.xml">RSS</a> · <a href={`https://github.com/${config.owner}/tjabo.dev`} target="_blank" rel="noopener">source</a>
 					</span>
 				</div>
 			</div>
